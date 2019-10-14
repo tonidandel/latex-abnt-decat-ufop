@@ -5,7 +5,7 @@ title: Home
 <div> 
     <img src="{{ '/images/logo-ichs.jpeg' | absolute_url }}" alt="ICHS" style="width:10%;" >
     <img src="{{ '/images/ichs2.jpg' | absolute_url }}" alt="ICHS" style="width:45%;" >
-    <img src="{{ '/images/logo-universidade.jpg' | absolute_url }}" alt="UFOP" style="width:10%;" >
+    <img src="{{ '/images/logo-universidade.jpg' | absolute_url }}" alt="UFOP" style="width:3%;" >
 </div>
 
 # Sobre o Curso
@@ -15,9 +15,6 @@ title: Home
 | afafa | akakak | amam |
 | ----- | ------ | ---- |
 
-| Coluna 1                                                                                                    | Coluna 2                                                                                                    | Coluna 3         |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------- |
-| {% include figure.html file="descartes-dioptrica-p460.svg" alt="descartes" width="30%" %}                   | texto linha 1 x coluna 3 [Reference page]({{ "/5-reference.html"                                            | absolute_url }}) |
-| teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste | teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste |                  |
-| teste                                                                                                       | teste                                                                                                       |                  |
-
+| Coluna 1 | Coluna 2  | Coluna 3 
+| ---- | ------------- | ------ | 
+| {% include figure.html file="descartes-dioptrica-p460.svg" alt="descartes" width="30%" %}   | texto linha 1 x coluna 2 [Reference page]({{ "/5-reference.html"    | absolute_url }}) |aaa
