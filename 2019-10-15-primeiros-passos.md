@@ -2,7 +2,9 @@
 nav: true
 title: 1 - Primeiros passos
 ---
+
 # O início
+
 O $\LaTeX$ é, a grosso modo, somente uma linguagem de marcação de textos, que 
 utiliza um arquivo de texto simples. Mas antes de nos familiarizarmos com 
 a estrutura de um arquivo em $\LaTeX$,
