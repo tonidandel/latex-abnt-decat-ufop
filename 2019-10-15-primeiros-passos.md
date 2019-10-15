@@ -1,10 +1,28 @@
 ---
 nav: true
-title: 1 - Markdown
+title: 1 - Primeiros passos
 ---
 # O início
-A primeira coisa que vamos explorar é a linguagem Markdown.
-## 1. Markdown
+O $\LaTeX$ é, a grosso modo, somente uma linguagem de marcação de textos, que 
+utiliza um arquivo de texto simples. Mas antes de nos familiarizarmos com 
+a estrutura de um arquivo em $\LaTeX$,
+[^1]: Que se pronuncia com um som de "c", como "lei-tec" ou "la-tec", já que a última letra vem do Grego $\chi$.
+vamos ver algumas possibilidades do sistema.
+
+## Belos projetos em LaTeX
+
+1. Não se preocupe ainda com instalação de ferramentas. Antes de qualquer coisa,
+conheça o potencial do LaTeX. Para isso, veja os links abaixo:
+    * [Belos projetos de diagramação](http://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends)
+    * [Exemplos extremos das possibilidades do LaTeX](http://www.tug.org/texshowcase/)
+
+
+1. Para ter uma noção das potencialidades isso, veja os links abaixo
+    * [Visual diagramação (recomendado)](http://mirrors.ctan.org/info/visualFAQ/visualFAQ.pdf)
+    * [Demonstração de belos projetos em TeX & amigos](http://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends)
+    * [The TeX showcase from TUG (diversos tipos de documentos)](http://www.tug.org/texshowcase/)
+
+# 1. Markdown
 O Markdown é uma linguagem simples para aplicar estilo em páginas da web
 ou outros documentos, aplicando poucos símbolos, como *, # ou +, e é bem útil
 para quem não gosta ou não sabe html. É uma ferramenta de diagramação muito útil
@@ -22,7 +40,7 @@ Se necessário, é poossível fazer uma citação com >. Por exemplo
 Ou até uma nota de rodapé,[^1] utilizando o comando `[^1]`,
 e depois `[^1]: texto da nota` 
 
-[^1]: A nota é essa aqui ó.
+[^2]: A nota é essa aqui ó.
 ### Criando listas
 Podemos também criar listas com `*` e listas ordenadas com `1.`, tais como: 
 
@@ -50,7 +68,7 @@ que, no nosso caso, insere a imagem:[^2]
 
 [^2]: Colocar a imagem em uma pasta criada na pasta raiz (root) do projeto. Neste caso, criamos a pasta images.
 
-![logo-ufop](/images/logo-universidade.svg)
+{% include figure.html file="descartes-dioptrica-p460.svg" alt="descartes" width="30%" %}
 
 ### Inserindo Código
 Ou até uma fórmula em LateX, como $$E=mc^2 \,,$$ ou até código de alguma linguagem,
