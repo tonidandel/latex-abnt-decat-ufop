@@ -1,6 +1,6 @@
 ---
 title: 2-Jekyll
-nav: false
+nav: true
 ---
 
 # GitHub Jekyll Project
