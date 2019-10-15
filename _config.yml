@@ -1,6 +1,6 @@
-# workshop-template https://github.com/evanwill/workshop-template
-# A Jekyll template for a simple workshop website, designed for github-pages,
-# based on Minima theme https://github.com/jekyll/minima
+# Adaptado do workshop-template https://github.com/evanwill/workshop-template
+# Um template Jekyll template para um website para oficinas, desenvolvido para github-pages,
+# baseado no tema Minima theme https://github.com/jekyll/minima
 
 # Notes: 
 # - fig include, {% include figure.html file="my-cat.jpg" alt="cat" caption="My cat" width="50%" %}
@@ -8,7 +8,7 @@
 # - use environment variable on build command to include analytics: JEKYLL_ENV=production jekyll build
 
 # site settings
-title: I Curso de Escrita Acadêmica com LaTeX - Pós-Graduação em Letras - UFOP
+title: Curso de Produção Textual Acadêmica e Diagramação com LaTeX - Pós-Graduação em Letras - UFOP
 description: "Curso introdutório de LaTeX para escrita de artigos, apresentações, dissertações e teses."
 keywords: "latex, latex-ufop, pos-letras ufop, ppgl-ufop"
 

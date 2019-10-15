@@ -1,5 +1,5 @@
 ---
-nav: false
+nav: true
 title: 1 - Markdown
 ---
 # O início
@@ -99,7 +99,7 @@ Linux:
 Após isso será aberta uma janela da página que foi criada no servidor local. 
 Basta abrir o endereço informado em `server adress` para ver o resultado:
 
-![Jekyll-image](/images/blog-jekyll1.png)
+{% include figure.html file="descartes-dioptrica-p460.svg" alt="descartes" width="30%" %}
 
 A partir deste momento, todo o conteúdo do site criado automaticamente
 pelo Jekyll, estará disponível na pasta `_site`.
