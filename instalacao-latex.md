@@ -1,5 +1,5 @@
 ---
-nav: true
+n
 title: 2 - Instalação
 ---
 
