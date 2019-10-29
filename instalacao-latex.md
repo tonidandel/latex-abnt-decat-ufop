@@ -16,7 +16,8 @@ basta utilizar o gerenciador de aplicativos da sua distribuição Linux favorita
 Se prerefir utilizar a linha de comandos, entre com os comandos abaixo (o sistema irá pedir sua senha de supeprusuário depois do primeiro comando):
 
 ```
-$ sudo su# apt update# apt install texlive-full && apt install texstudio
+$ sudo su
+# apt update && apt install texlive-full && apt install texstudio
 ```
 
 Após isso basta abrir o editor de texto texstudio no seu menu de aplicativos e começar a utilizar o programa:
