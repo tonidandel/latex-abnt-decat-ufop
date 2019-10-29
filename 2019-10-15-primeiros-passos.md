@@ -7,7 +7,7 @@ title: 1 - Primeiros passos
 
 ## 1. História do $\TeX$
 
-O $\LaTeX$ (que se pronuncia *[''la:tec]* ou *['lei:tec]*) vem da junção no mome *Lamport* e do grego $\Tau\epsilon\Chi\nu\eta\,$ *[''tec:ni]* e que, etimologicamente, está nas origens do termo *técnica*. É, a grosso modo, uma Linguagem de Programação para marcação de texto, ou, mais à rigor, um *Interpretador*, que trabalha em cima de um arquivo de texto puro, fazendo algo bem próximo ao que um professor ou professora de línguas faria ao corrigir um texto: uma análise léxica, semântica e sintática, linha por linha , como:
+O $\LaTeX$ (que se pronuncia *[''la:tec]* ou *['lei:tec]*) vem da junção no mome *Lamport* e do grego $\Tau\epsilon\Chi\nu\eta\,$ *[''tec:ni]* e que, etimologicamente, está nas origens do termo *técnica*. É, a grosso modo, uma Linguagem de Programação para marcação de texto, ou, mais à rigor, um *Interpretador*, que trabalha em cima de um arquivo de texto puro, fazendo algo bem próximo ao que um professor ou professora de línguas faria ao corrigir um texto: uma análise léxica, semântica e sintática, linha por linha, como:
 
     Início
        1. Colocar um titulo aqui.
@@ -71,6 +71,6 @@ Após a execução em um editor qualquer de texto, que vimos ao longo da oficina
 
 Que deverá gerar algo como expresso na figura: 
 
-![a](/home/danny/tonidandel/curso-escrita-academica/oficina-latex-pos-letras-2019/images/exemplo1.png)Obviamente que eu ainda não disse como se dão os passos entre o arquivo de texto puro e o resultado. Mas quero, contudo, que você se atente aos elementos presentes nesta imagem e em seu potencial. Veja que com poucos comandos conseguimos um resultado simples, elegante e profissional para o pequeno texto. Em momento algum tivemos que nos preocupar em inserir campos para numeração da equação, tamanho das fontes ou símbolos em algum editor de equações.
+![a](images/exemplo1.png)Obviamente que eu ainda não disse como se dão os passos entre o arquivo de texto puro e o resultado. Mas quero, contudo, que você se atente aos elementos presentes nesta imagem e em seu potencial. Veja que com poucos comandos conseguimos um resultado simples, elegante e profissional para o pequeno texto. Em momento algum tivemos que nos preocupar em inserir campos para numeração da equação, tamanho das fontes ou símbolos em algum editor de equações.
 
 > Agora é o momento de alguns passos para [instalação](instalacao-latex.md) do $\LaTeX$. Como não é o foco dessa oficina, vou me atentar apenas a algumas sugestões de instalação para os sistemas operacionais Linux, Windows, MacOS, e "Nuvem".
