@@ -9,8 +9,6 @@ title: 1-Primeiros passos
 
 O $\LaTeX$ (que se pronuncia *[''la:tec]* ou *['lei:tec]*) vem da junção no mome *Lamport* e do grego $\tau\, \epsilon\, \chi\, \nu\,\eta\,$ *[''tec:ni]* e que, etimologicamente, está nas origens do termo *técnica*. É, a grosso modo, uma Linguagem de Programação para marcação de texto, ou, mais à rigor, um *Interpretador*, que trabalha em cima de um arquivo de texto puro, fazendo algo bem próximo ao que um professor ou professora de línguas faria ao corrigir um texto: uma análise léxica, semântica e sintática, linha por linha , como:
 
-
-
     Início
        1. Colocar um titulo aqui.
        2. colocar um negrito na palavra tal;
