@@ -1,0 +1,81 @@
+% ----------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% ----------------------------------------------------------
+\chapter[Introdução]{Introdução}
+%\addcontentsline{toc}{chapter}{Introdução}
+% ----------------------------------------------------------
+
+\section{Justificativas e Relev{\^a}ncia}
+%
+Este documento e seu código-fonte são exemplos de referência de uso da classe
+\textsf{abntex2} e do pacote \textsf{biblatex-abnt}. O documento exemplifica uma realização possível entre as opções existentes na norma ABNT NBR 10520:2018 \emph{Citações em documentos -- Apresentação} e da norma ABNT NBR 6023:2018 \emph{Referências -- Elaboração}, cientes de que existe uma distância entre as ``normas'' e a interpretação das normas. Assim, antes de tudo, converse com seu orientador ou representantes do programa de pós-graduação de sua universidade, mostre uma cópia do documento PDF gerado por este arquivo e certifique-se de que não terá problas futuros com relação à aceitação ou não do modelo.
+
+A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é modelo específico de nenhuma universidade ou instituição, mas que implementa tão somente os requisitos das normas da ABNT. 
+
+\section{Metodologia}
+Comecemos então com um exemplo de citação, como esta aqui, feita em notas explicativas,\footcite[Esta é uma nota explicativa. Cf. e.g.,][\S 12]{boyle1772} conforme a norma NBR 10520:2018, existem dois tipos de citações em notas de rodapé:
+\begin{citacao}
+	\begin{itemize}
+		\item[$3.6$] \textbf{notas de rodapé:} Indicações, observações ou aditamentos ao texto feitos pelo autor, tradutor ou editor, podendo	também aparecer na margem esquerda ou direita da mancha gráfica. 
+		\item[$3.7$] \textbf{notas explicativas:} Notas usadas para comentários, esclarecimentos ou explanações, que não possam ser incluídos no texto.
+	\end{itemize} 
+\end{citacao}
+
+
+Uma outra citação nada a ver.\footcite[Esta é uma outra nota explicativa. Ver também ][p.~12]{herao}
+%Uma outra citação nada a ver.\cite[Esta é uma outra nota explicativa. Ver também ][p.~12]{herao}. Ver também \cite{boyle1772}
+
+%\caixa{O autor não é obrigado a seguir as notas explicativas com o comando ``footcite'', que gera a essa nota explicativa.\footcite{boyle1772} Pode utilizar o estilo autor-data igualmente, mas deve seguir o mesmo padrão ao longo do texto. Por exemplo, se usar o comando ``cite'', será gerada a entrada \cite{descartes-oeuvres-volx} ou, se quiser apenas o autor, com o comando ``citeauthor'', será gerada a entrada\citeauthor[][12]{descartes-oeuvres-volx}. Ainda, se quiser imprimir apenas a data de referida obra, basta utilizar o comando ``citedate'', que gera a entrada \citedate[55]{descartes-oeuvres-volx}.}
+
+\lipsum[1]
+
+\section{Objetivos}
+
+\lipsum[7]
+
+\lipsum[8]
+
+\section{Organiza{\c c}{\~a}o e estrutura}
+
+\lipsum*[9-11]
+
+\begin{itemize}
+\item item;
+\item item;
+\item item;
+\item item;
+\end{itemize}
+
+\section{Cronograma}
+
+Esta seção deve constar somente no projeto de monografia. Não deve aparecer na versão final do texto.
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+
+Um exemplo de cronograma das atividades é proposto na tabela \ref{tab:cronograma}.\footnote{Voc{\^e} pode elaborar também tabelas online, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Table Generator''\url{http://www.tablesgenerator.com/}.}
+  
+\begin{table}[h]
+\ABNTEXfontereduzida
+\caption[Cronograma das atividades]{Cronograma das atividades de elaboração da monografia.}
+\label{tab:cronograma}
+\begin{minipage}{0.3\textwidth}
+    \centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+                             & \multicolumn{16}{c|}{Meses}                                                   \\ \hline
+Atividades (Etapas)          & 01 & 02 & 03 & 04 & 05 & 06 & 07 & 08 & 09 & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\ \hline
+1. Estudo da teoria          & X  & X  & X  & X  & X  &    &    &    &    &    &    &    &    &    &    &    \\ \hline
+2. Atualização bibliográfica & X  & X  & X  & X  & X  & X  & X  &    &    &    &    &    &    &    &    &    \\ \hline
+3. Seleção de Material       & X  & X  & X  & X  & X  & X  & X  & X  & X  &    &    &    &    &    &    &    \\ \hline
+4. Elaboração da monografia  &    &    &    &    & X  & X  & X  & X  & X  & X  & X  & X  & X  & X  & X  &    \\ \hline
+5. Elaboração de Artigo      &    &    &    &    &    &    &    &    & X  & X  & X  & X  & X  & X  & X  &    \\ \hline
+6. Defesa da monografia      &    &    &    &    &    &    &    &    &    &    &    &    &    &    &    & X  \\ \hline
+\end{tabular}
+  \end{minipage}
+\end{table}
