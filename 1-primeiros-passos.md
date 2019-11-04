@@ -3,6 +3,8 @@ nav: true
 title: 1-Primeiros passos
 ---
 
+
+
 # O início
 
 ## 1. História do $\LaTeX$
