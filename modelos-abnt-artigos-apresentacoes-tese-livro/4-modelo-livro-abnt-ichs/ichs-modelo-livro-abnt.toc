@@ -1,0 +1,17 @@
+\changetocdepth {4}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {brazil}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introdução}{7}{chapter*.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {1}Um exemplo de capítulo}{11}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {2}Exemplos de imagens}{17}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {3}Exemplos de tabela}{21}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Uma seção}{21}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\vspace {\cftbeforepartskip }
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Refer{\^e}ncias}{25}{section*.4}

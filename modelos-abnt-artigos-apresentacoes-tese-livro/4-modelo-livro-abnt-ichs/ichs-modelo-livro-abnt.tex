@@ -42,7 +42,6 @@
 \usepackage{mdframed}
 \usepackage{fourier-orns}
 \usepackage{microtype} 			% para melhorias de justificação
-\usepackage{amsmath,amssymb,unicode-math} % escrita matematica
 \usepackage{relsize} % readicionado comando \part não funciona. Ver: https://github.com/abntex/abntex2/issues/109
 \usepackage{verbatim}
 
@@ -54,6 +53,7 @@
 \usepackage[backend=biber,style=abnt-ibid,sccite,scbib,justify,extrayear,citecount,noslsn,backref,repeatfields]{biblatex}
 
 \addbibresource{referencias-teste.bib}% ---
+\addbibresource{abntex2-modelo-references.bib}
 % Personalização do estilo biblatex-abnt
 %---
 % Adequa as urls de acordo com normas 6023:218:
@@ -71,7 +71,11 @@
 \usepackage{multirow}
 \usepackage{lipsum}				% para geração de dummy text
 % ---
-
+% Fonte Baskervaldx - inspirada na lendária fonte Barkerville
+\usepackage{Baskervaldx} % tosf in text, tlf in math
+\usepackage[baskervaldx,vvarbb]{newtxmath} % math italic letters from Times. 
+\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+%---
 % ---
 % Informações do documento
 % ---
