@@ -1,6 +1,6 @@
 ---
 nav: true
-title: 2 - Instalação
+title: 2-Instalação
 ---
 
 # 2. Instalação de um ambiente $\LaTeX$

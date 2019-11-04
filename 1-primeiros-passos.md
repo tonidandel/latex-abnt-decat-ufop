@@ -1,6 +1,6 @@
 ---
 nav: true
-title: 1 - Primeiros passos
+title: 1-Primeiros passos
 ---
 
 # O início
