@@ -24,7 +24,7 @@ Após isso basta abrir o editor de texto texstudio no seu menu de aplicativos e 
 
 ![Editor TexStudio](images/textudio.png)
 
-**É altamente recomendável** utilizar um sistema operacional GNU/Linux para rodar o \LaTeX. Quem tiver interesse, assistir o [tutorial de instalação](https://www.youtube.com/watch?v=WgJksOkfnTQ) de uma distribuição leve e intuitiva, o Linux Mint.
+**É altamente recomendável** utilizar um sistema operacional GNU/Linux para rodar o $\LaTeX$. Quem tiver interesse, assistir o [tutorial de instalação](https://www.youtube.com/watch?v=WgJksOkfnTQ) de uma distribuição leve e intuitiva, o Linux Mint.
 
 ## Windows:
 
@@ -36,6 +36,6 @@ Há uma distribuição do TexLive para o MacOS, também disponibilizada pelo TUG
 
 ## Instalação em "Nuvem":
 
-Uma evolução da computação foi certamente a possibilidade de execução de aplicatitvos em nuvem. Há um sistema completo de desenvolvimento em \LaTeX que pode ser executado totalmente online, chamado **[OverLeaf](https://www.overleaf.com/)**. Embora não seja um sistema livre e de código aberto, o Overleaf possibilita a criação de projetos em \LaTeX totalmente sem cobranças, além de não ser necessária nenhuma instalação anterior. Basta criar uma conta e começar a utilizar! O sistema possui um editor de texto integrado com a exibição do `pdf` ao lado em tempo real. É muito útil para projetos colaborativos, pois é possível que várias pessoas, ao mesmo tempo, editem o arquivo `.tex`:
+Uma evolução da computação foi certamente a possibilidade de execução de aplicatitvos em nuvem. Há um sistema completo de desenvolvimento em $\LaTeX$ que pode ser executado totalmente online, chamado **[OverLeaf](https://www.overleaf.com/)**. Embora não seja um sistema livre e de código aberto, o Overleaf possibilita a criação de projetos em \LaTeX totalmente sem cobranças, além de não ser necessária nenhuma instalação anterior. Basta criar uma conta e começar a utilizar! O sistema possui um editor de texto integrado com a exibição do `pdf` ao lado em tempo real. É muito útil para projetos colaborativos, pois é possível que várias pessoas, ao mesmo tempo, editem o arquivo `.tex`:
 
 ![OverLeaf](images/overleaf-2019.png)
