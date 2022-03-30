@@ -8,13 +8,13 @@
 # - use environment variable on build command to include analytics: JEKYLL_ENV=production jekyll build
 
 # site settings
-title: Curso de Produção Textual Acadêmica e Diagramação com LaTeX - UFOP
-description: "Curso introdutório de LaTeX para escrita de artigos, apresentações, dissertações e teses."
+title: Oficina de Produção Textual Acadêmica e Diagramação com LaTeX - UFOP
+description: "Curso introdutório 101 (Beabá) de LaTeX para escrita de artigos, apresentações, dissertações e teses."
 keywords: "latex, latex-ufop"
 
 # author settings for cc-by
 author: prof. Dr. Danny A. V. Tonidandel
-pub_year: 2019
+pub_year: 2022
 github_username: tonidandel
 # add the full url for the github repository
 repo: "https://github.com/tonidandel/oficina-latex"
