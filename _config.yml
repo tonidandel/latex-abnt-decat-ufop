@@ -9,8 +9,8 @@
 
 # site settings
 title: Oficina de Produção Textual Acadêmica e Diagramação com LaTeX - UFOP
-description: "Curso introdutório 101 (Beabá) de LaTeX para escrita de artigos, apresentações, dissertações e teses."
-keywords: "latex, latex-ufop"
+description: "Curso introdutório 101 (Beabá) de LaTeX para escrita acadêmcia."
+keywords: "latex, latex-ufop, template-abnt-ufop"
 
 # author settings for cc-by
 author: prof. Dr. Danny A. V. Tonidandel
