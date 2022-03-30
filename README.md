@@ -1,3 +1,2 @@
 # Sobre este repositório
-
-Página do I Curso de Escrita Acadêmica e Diagramação com LaTeX - Programa de Pós-Graduação em Letras: Estudos da Linguagem - UFOP - 2019
+Página da oficina de Escrita Acadêmica e Diagramação com LaTeX da UFOP, que foi oferecido pela primeira vez em 2019 ao corpo discente do POSLETRAS - Programa de Pós-Graduação em Letras: Estudos da Linguagem. 

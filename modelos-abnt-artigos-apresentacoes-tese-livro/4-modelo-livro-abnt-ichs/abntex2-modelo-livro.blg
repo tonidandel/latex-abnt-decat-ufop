@@ -1,5 +1,0 @@
-[0] Config.pm:302> INFO - This is Biber 2.9
-[0] Config.pm:305> INFO - Logfile is 'abntex2-modelo-livro.blg'
-[21] biber:313> INFO - === seg nov  4, 2019, 11:11:29
-[109] Utils.pm:185> ERROR - Cannot find control file 'abntex2-modelo-livro.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
-[109] Biber.pm:114> INFO - ERRORS: 1

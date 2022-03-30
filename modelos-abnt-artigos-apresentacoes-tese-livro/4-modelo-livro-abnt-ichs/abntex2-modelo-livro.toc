@@ -1,8 +1,0 @@
-\changetocdepth {4}
-\babel@toc {brazil}{}
-\contentsline {chapter}{Introdução}{7}{chapter*.1}
-\contentsline {chapter}{\chapternumberline {1}Um exemplo de capítulo}{11}{chapter.1}
-\contentsline {chapter}{\chapternumberline {2}Exemplos de imagens}{17}{chapter.2}
-\contentsline {chapter}{\chapternumberline {3}Exemplos de tabela}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Uma seção}{21}{section.3.1}
-\vspace {\cftbeforepartskip }
