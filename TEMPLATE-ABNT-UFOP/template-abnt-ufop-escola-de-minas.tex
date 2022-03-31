@@ -89,30 +89,38 @@
 % Usando o pacote biblatex-abnt e o biber para a compilacao das fontes
 
 % Opção 1: notas de referência, com citações reduzidas (idem, ibidem opcit...)
-%\usepackage[backend=biber,style=abnt-ibid,sccite,scbib,justify,extrayear,citecount,noslsn,backref,repeatfields]{biblatex}
+%\usepackage[backend=biber,
+%style=abnt-ibid,
+%sccite,
+%scbib,
+%justify,
+%extrayear,
+%citecount,
+%noslsn,
+%backref,
+%repeatfields]{biblatex}
 
-% Opção 2: notas explicativas, ou autor-data
+% Opção 2: notas explicativas no sistema autor-data
 \usepackage[backend=biber,
-%%%%---configuracoes do estilo abnt
+% configuracoes do estilo abnt
 style=abnt,
-sccite,
-ittitles,
-citecount,
-scbib,
+sccite, % sobrenomes em caixa alta
+ittitles, % Titulos em italico
+citecount, % contar o número de citações
+scbib, % biliografia em caixa alta
 justify,
 noslsn,
 repeatfields,
-sorting=nty,
+sorting=nty, % ordem alfabetica
 ]{biblatex}
 
+% ARQUIVO COM AS REFERÊNCIAS BIBLIOGRAFICAS
 \addbibresource{referencias.bib}
 
 % ---
 % Personalização do estilo biblatex-abnt - por Danny A. V Tonidandel
-%---
 % Adequa as urls de acordo com normas 6023:2018
 \DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\addspace \url{#1}}%
-
 \DeclareFieldFormat{urldate}{\bibstring{urlseen}\addcolon\addspace #1}%
 
 % Reseta contadores das notas de rodapé em cada capítulo
@@ -120,34 +128,30 @@ sorting=nty,
 \@addtoreset{footnote}{chapter}
 \makeatother
 
-% Comandos para exibir uma caixa colorida de fundo cinza para notas historicas
-\newcommand{\caixabranca}{\fbox}
-\newcommand{\caixa}[1]{\caixabranca{\small{\begin{minipage}{\textwidth-2.5cm}{#1}\end{minipage}}}}
-
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2 - pode ser removido
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2 - podem ser removidos
 % ---
 % Pacotes adicionais, usados no anexo do modelo de folha de identificação
 % ---
+% Tabelas
 \usepackage{supertabular}
 \usepackage{multicol}
 \usepackage{multirow}
-\usepackage{lipsum}				% para geração de dummy text
+\usepackage{lipsum}	% para geração de dummy text
 % ---
-
 
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Modelo de trabalho acadêmico (monografia, dissertação, tese) com \LaTeXe + \abnTeX ~para estudantes da Escola de Minas-UFOP, segundo as normas ABNT}
-\autor{Estudante}
+\titulo{Modelo ABNT (Template) para Monografias com \LaTeXe: Curso de Engenharia de Controle e Automação - Escola de Minas - UFOP}
+\autor{Amy Farah Fawler}
 \local{Ouro Preto}
-\data{2022}
-\orientador{profa. Marie S. Curie, PhD.}
-\coorientador{prof. A. de Saint-Exupéry, PhD.}
+\data{\the\year} % imprime o ano corrente no campo data
+\orientador{Profa. Marie S. Curie, PhD.}
+\coorientador{Prof. A. de Saint-Exupéry, PhD.}
 \instituicao{Universidade Federal de Ouro Preto}
 \tipotrabalho{Monografia de Graduação}
-\preambulo{Trabalho apresentado ao Colegiado do Curso de XXX da Universidade Federal de Ouro Preto como parte dos requisitos para a obtenção do Grau de XXX.}
+\preambulo{Trabalho apresentado ao Colegiado do Curso de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto como parte dos requisitos para a obtenção do Grau de Engenheira(o) de Controle e Automação.}
 % ---
 
 
@@ -165,7 +169,7 @@ sorting=nty,
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
+		pdfkeywords={ufop}{latex}{abntex}{decat}{monografia},
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
@@ -218,22 +222,24 @@ sorting=nty,
 			\begin{tabular}{ccc}
 				\begin{tabular}{c}
 					\\
-					\includegraphics[width=1cm]{logo-universidade.jpg}
+					\includegraphics[width=0.9cm]{logo-universidade.jpg}
 				\end{tabular}
 				&
 				\begin{tabular}{c}
 					\\
 					{\large Universidade Federal de Ouro Preto} \\
 					{\large Escola de Minas} \\
-					{Colegiado do curso de Engenharia de Controle e Automação}
+					{\large CECAU - Colegiado do Curso de } \\
+					{\large Engenharia de Controle e Automação}
 				\end{tabular}
 				&
 				\begin{tabular}{c}
 					\\
-					\includegraphics[width=2cm]{logo-unidade-2.jpg}
+					\includegraphics[width=2.1cm]{logo-unidade-2.jpg}
 				\end{tabular}
 			\end{tabular}
-		\end{minipage} \\
+		\end{minipage}
+
 \centering
 \vspace*{1cm}
 {\ABNTEXchapterfont\large\imprimirautor}
@@ -262,7 +268,7 @@ sorting=nty,
 
 
 % ---
-% Inserir a ficha bibliografica
+% Inserir a ficha bibliográfica
 % ---
 
 % Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
@@ -291,7 +297,7 @@ sorting=nty,
 	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
 	\imprimirlocal, \imprimirdata-
 
-	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
+	\hspace{0.5cm}  p. : il. (algumas color.) ; 30 cm.\\
 
 	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
 
@@ -326,13 +332,13 @@ sorting=nty,
 %
 \begin{folhadeaprovacao}
 %
-   Dissertação defendida e aprovada, em $XX$ de $XX$ de \imprimirdata, pela comiss{\~a}o avaliadora constitu{\'i}da pelos professores:
+   Dissertação defendida e aprovada em XX de XX de \the\year~ pela comissão avaliadora constituída pelos professores e professoras:
    \vspace*{\fill}
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador}
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador(a)}
    \vspace*{\fill}
-   \assinatura{\textbf{Prof. Oliver Heaviside, Dr.} \\ Convidado}
+   \assinatura{\textbf{Prof. Oliver Heaviside, PhD.} \\ Convidado}
    \vspace*{\fill}
-   \assinatura{\textbf{Prof. William Thomson, Dr.} \\ Convidado}
+   \assinatura{\textbf{Prof. William Thomson, PhD.} \\ Convidado}
    \vspace*{\fill}
    %\assinatura{\textbf{Professor} \\ Convidado 3}
   % \vspace*{\fill}
@@ -649,8 +655,9 @@ Esta seção deve constar somente no projeto de monografia. Não deve aparecer n
 % Capitulo com exemplos de comandos inseridos de arquivo externo
 % ---
 \chapter{Desenvolvimento}
+%
 Inserindo uma figura. A figura \ref{fig:308} ilustra algum ponto importante.
-\begin{figure}[!htbp]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.3]{fig09.pdf} % teste os valores
 	\caption[Legenda reduzida - aparece no sumario]{Legenda completa. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
@@ -667,7 +674,7 @@ Sendo no ICHS (ver figura \ref{fig:309}, que está na página \pageref{fig:309})
 
 \lipsum[30]
 
-\begin{figure}[!htbp]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.4]{ichs2.jpg} % teste os valores
 	\caption[Legenda reduzida - aparece no sumário]{Legenda completa. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
@@ -685,7 +692,7 @@ Sendo no ICHS (ver figura \ref{fig:309}, que está na página \pageref{fig:309})
 \chapter{Uma breve história da teoria}
 % ---
 
-\section{Uma seção}
+\section{Uma seção bem extravagante}
 % ---
 
 \lipsum[1]
@@ -753,7 +760,7 @@ Um \emph{grand finale}: \lipsum[31-33]
 % Imprime uma página indicando o início dos apêndices
 \partapendices
 % ---
-% Insere arquivo com os apendices A e B
+% Insere arquivo com os apêndices A e B
 % ----------------------------------------------------------
 \chapter{Quisque libero justo}
 % ----------------------------------------------------------
