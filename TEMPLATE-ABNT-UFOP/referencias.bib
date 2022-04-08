@@ -1,28 +1,16 @@
-@article{descartes-carta-mersene,
-	title={Carta de Ren{\'e} Descartes a Marin Mersenne}, 
-	volume={1}, 
-	url={http://bit.ly/2KI0pVp}, 
-	DOI={10.1590/S1678-31662003000100008}, 
-	number={1}, 
-	journal={Scientiae Studia}, 
-	author={Ren{\'e} Descartes}, 
-	year={2003}, 
-	month={03}, 
-	pages={87-92}
+%artigo
+@article{thomson_1869,
+	title={On Vortex Atoms},
+	volume={6},
+	DOI={10.1017/S0370164600045430},
+	journal={Proceedings of the Royal Society of Edinburgh},
+	publisher={Royal Society of Edinburgh Scotland Foundation},
+	author={Thomson, William},
+	year={1869},
+	pages={94–105}
 }
 
-@book{descartes-oeuvres-volx,
-	title={Oeuvres de Descartes}, 
-	author={Ren{\'e} Descartes}, 
-	year={1908},
-	note = {Digitalizado por University of Connecticut Libraries},
-	publisher = {Leopold Cerf},
-	volume = {10},
-	url = {http://bit.ly/2S37cMB},
-	adress = {Paris}, 
-	pagestotal={712}
-}
-	
+% Livro em colecao
 @incollection{descartes-metodo,
 	address={S\~ao Paulo},
 	author={Ren{\'e} Descartes},
@@ -35,21 +23,45 @@
 	year={1983}
 }
 
-
-@incollection{boyle1772,
+% Livro multivolumes
+@mvbook{boyle1772,
 	author = {Robert Boyle},
 	editor = {Thomas Birch},
 	year = {1772},
 	volumes = {6},
-	booktitle = {The works of the Honourable Robert Boyle},
-	note = {Em seis volumes, prefixado por uma biografia do autor (1627-1691)},
+	title = {The works of the Honourable Robert Boyle},
 	url = {http://bit.ly/boyle-works},
 	publisher = {J. and F. Rivington},
-	urldate = {2019-02-03},
 	pagetotal= {1062},
 	address = {London}
 }
 
+%multivolume - referencia cruzada
+@mvbook{boyle1772-a,
+	author = {Robert-boyle},
+	volume = {1},
+	title = {A consideration of what happens in trying the Torricellian and ohter experiments},
+	crossref={boyle1772}
+}
+
+% anais
+@inproceedings{Becker:1975:PL:980190.980212,
+	author = {Becker, Joseph D.},
+	title = {The Phrasal Lexicon},
+	booktitle = {Proceedings of the 1975 Workshop on Theoretical Issues in Natural Language Processing},
+	series = {TINLAP '75},
+	year = {1975},
+	location = {Cambridge, Massachusetts},
+	pages = {60--63},
+	numpages = {4},
+	url = {http://bit.ly/2YN0ZpI},
+	doi = {10.3115/980190.980212},
+	acmid = {980212},
+	publisher = {Association for Computational Linguistics},
+	address = {Stroudsburg, PA, USA},
+}
+
+% Conteudo dentro de livro com autor e titulo independente
 @InBook{herao,
 	Title                    = {Pneumatica},
 	Author                   = {Herão},
@@ -63,8 +75,9 @@
 	editortype 				 = {Trad.}
 }
 
+% conferencia
 @CONFERENCE{tonidandel2010,
-	author = {D. A. V. Tonidandel},
+	author = {Tonidandel, Danny Augusto Vieira},
 	title = {Decifrando a transformada Z},
 	booktitle = {CBA 2010 - XVIII Congresso Brasileiro de Autom{\'a}tica},
 	year = {2010},
@@ -74,15 +87,92 @@
 	url = {http://bit.ly/2LJgKMv}
 }
 
+%livro com notas
+@Book{luciano-de-samosata,
+	Author = {Luciano de Samosata},
+	year={1829},
+	address={Boston},
+	nameaddon = {Luciani Samosatensis},
+	Publisher={The Harvard University},
+	title={Opera},
+	volume = {3},
+	note = {Texto em grego, com introdução e notas em Latim},
+	url = {http://bit.ly/samosata},
+	urlaccessdate = {2019-07-17}
+}
 
-@inBook{platao-teeteto,
-	maintitle                = {Teeteto (o conhecimento)},
-	Author                   = {Platão},
-	Publisher                = {Grupo Acrópolis},
-	editortype = {Trad.},
-	editor = {Carlos Alberto Nunes},
-	Year                     = {2011},
-	institution 			 = {Cultvox},
-	Note                     = {(epub)},
-	url = {https://bit.ly/2vFHfJ5}	
+%tese
+@thesis{freitas2018,
+	author = {Leandro César Albuquerque de Freitas},
+	title = {Análise e tradução do Livro I do De rerum natura de Tito Lucrécio Caro},
+	type = {Doutorado em Letras Clássicas},
+	adress = {São Paulo},
+	year = {2018},
+	school = {Faculdade de Filosofia, Letras e Ciências Humanas, Universidade de São Paulo},
+	pagename = {f.},
+	urlaccessdate = {2015-01-10},
+	url = {https://bit.ly/2DY9hUD}
+}
+
+
+% Tipo indefinido
+@Misc{Einstein1920,
+	Title                    = {Aether und Relativitaetstheorie},
+	Author                   = {Albert Einstein},
+	Note                     = {Transcrição de uma palestra proferida na Universidade Leyden, Holanda.},
+	Year                     = {1920},
+	Address                  = {Jerusalém},
+	Publisher                = {The Albert Einstein Archives},
+	Url                      = {http://alberteinstein.info/vufind1/Record/EAR000045690}
+}
+
+
+% referencia online
+@online{hofstader2009,
+	title = {Analogy as the core of cognition},
+	year = {2009},
+	month={9},
+	day = {11},
+	organization = {Stanford University},
+	author = {Douglas Hofstader},
+	note = {Presidential Lecture at Stanford University Humanities Center when the author exmamines the role and contributions of analogy in cognition, using a variety of analogies to illustrate his points.},
+	url = {http://bit.ly/hofstader},
+	urlaccessdate = {201-08-17}
+}
+
+% preprint
+@misc{tembrevilla2019electric,
+	title={Electric fluid to electric current: The problematic attempts of abstraction to concretization},
+	author={Gerald Tembrevilla and Stephen Petrina},
+	year={2019},
+	eprint={1910.02762},
+	archivePrefix={arXiv},
+	primaryClass={physics.ed-ph}
+}
+
+% Artigo
+@article{descartes-carta-mersene,
+	title={Carta de René Descartes a Marin Mersenne},
+	volume={1},
+	url={http://bit.ly/2KI0pVp},
+	DOI={10.1590/S1678-31662003000100008},
+	number={1},
+	journal={Scientiae Studia},
+	author={René Descartes},
+	year={2003},
+	month={03},
+	pages={87-92}
+}
+
+% Livro
+@book{descartes-oeuvres-volx,
+	title={Oeuvres de Descartes},
+	author={Ren{\'e} Descartes},
+	year={1908},
+	note = {Digitalizado por University of Connecticut Libraries},
+	publisher = {Leopold Cerf},
+	volume = {10},
+	url = {http://bit.ly/2S37cMB},
+	adress = {Paris},
+	pagestotal={712}
 }

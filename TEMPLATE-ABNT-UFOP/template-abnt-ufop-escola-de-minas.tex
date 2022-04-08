@@ -143,7 +143,7 @@ sorting=nty, % ordem alfabetica
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Modelo ABNT (Template) para Monografias com \LaTeXe: Curso de Engenharia de Controle e Automação - Escola de Minas - UFOP}
+\titulo{Modelo ABNT (Template) \LaTeX~ para Monografias - Curso de Engenharia de Controle \& Automação - DECAT - UFOP}
 \autor{Amy Farah Fawler}
 \local{Ouro Preto}
 \data{\the\year} % imprime o ano corrente no campo data
@@ -227,7 +227,7 @@ sorting=nty, % ordem alfabetica
 				&
 				\begin{tabular}{c}
 					\\
-					{\large Universidade Federal de Ouro Preto} \\
+					{\large \imprimirinstituicao} \\
 					{\large Escola de Minas} \\
 					{\large CECAU - Colegiado do Curso de } \\
 					{\large Engenharia de Controle e Automação}
@@ -336,9 +336,9 @@ sorting=nty, % ordem alfabetica
    \vspace*{\fill}
    \assinatura{\textbf{\imprimirorientador} \\ Orientador(a)}
    \vspace*{\fill}
-   \assinatura{\textbf{Prof. Oliver Heaviside, PhD.} \\ Convidado}
+   \assinatura{\textbf{Prof. Oliver Heaviside, PhD.} \\ Convidada(o)}
    \vspace*{\fill}
-   \assinatura{\textbf{Prof. William Thomson, PhD.} \\ Convidado}
+   \assinatura{\textbf{Prof. William Thomson, PhD.} \\ Convidada(o)}
    \vspace*{\fill}
    %\assinatura{\textbf{Professor} \\ Convidado 3}
   % \vspace*{\fill}
@@ -501,13 +501,12 @@ sorting=nty, % ordem alfabetica
 
 \section{Justificativas e Relevância}
 %
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{biblatex-abnt}. O documento exemplifica uma realização possível entre as opções existentes na norma ABNT NBR 10520:2018 \emph{Citações em documentos -- Apresentação} e da norma ABNT NBR 6023:2018 \emph{Referências -- Elaboração}, cientes de que existe uma distância entre as ``normas'' e a interpretação das normas. Assim, antes de tudo, converse com seu orientador ou representantes do programa de pós-graduação de sua universidade, mostre uma cópia do documento PDF gerado por este arquivo e certifique-se de que não terá problas futuros com relação à aceitação ou não do modelo.
+Este documento e seu código-fonte são exemplos de referência de uso da classe \textsf{abntex2} e do pacote \textsf{biblatex-abnt}. O documento exemplifica uma realização possível entre as opções existentes na norma ABNT NBR 10520:2018 \emph{Citações em documentos -- Apresentação} e da norma ABNT NBR 6023:2018 \emph{Referências -- Elaboração}, cientes de que existe uma distância entre as ``normas'' e a interpretação das normas. Assim, antes de tudo, converse com seu orientador ou representantes do programa de pós-graduação de sua universidade, mostre uma cópia do documento PDF gerado por este arquivo e certifique-se de que não terá problas futuros com relação à aceitação ou não do modelo.
 
 A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é modelo específico de nenhuma universidade ou instituição, mas que implementa tão somente os requisitos das normas da ABNT.
 
 \section{Metodologia}
-Comecemos então com um exemplo de citação, como esta aqui, feita em notas explicativas,\footcite[Esta é uma nota explicativa. Cf. e.g.,][\S 12]{boyle1772} conforme a norma NBR 10520:2018, existem dois tipos de citações em notas de rodapé:
+De acordo com \footcite[Descartes foi um grande filósofo francês do século XVII. Veja em][p.~10]{descartes-carta-mersene},  etc... Comecemos então com um exemplo de citação, como esta aqui, feita em notas explicativas,\footcite[Esta é uma nota explicativa. Cf. e.g.,][\S 12]{boyle1772} conforme a norma NBR 10520:2018, existem dois tipos de citações em notas de rodapé:
 \begin{citacao}
 	\begin{itemize}
 		\item[$3.6$] \textbf{notas de rodapé:} Indicações, observações ou aditamentos ao texto feitos pelo autor, tradutor ou editor, podendo	também aparecer na margem esquerda ou direita da mancha gráfica.
@@ -656,6 +655,17 @@ Esta seção deve constar somente no projeto de monografia. Não deve aparecer n
 % ---
 \chapter{Desenvolvimento}
 %
+Se estivermos na Escola de Minas, é bom mostrar uma fórmula:
+
+\begin{equation}
+f(x) = \int_{0}^{\infty} \arcsin \left[\ln x^2 \right] dx \,.
+\label{eq:01}
+\end{equation}
+
+Conforme a equação \eqref{eq:01}, que está na página \pageref{eq:01}, temos que...
+
+Sendo no ICHS (ver figura \ref{fig:309}, que está na página \pageref{fig:309}), teremos uma noção melhor do movimento estudantil.
+
 Inserindo uma figura. A figura \ref{fig:308} ilustra algum ponto importante.
 \begin{figure}[htbp]
 	\centering
@@ -664,13 +674,13 @@ Inserindo uma figura. A figura \ref{fig:308} ilustra algum ponto importante.
 	\label{fig:308}
 \end{figure}
 
-Agora vem uma citação. Segundo Platão, em seu Teeteto:\footcite{platao-teeteto}
+Agora vem uma citação. Com Herão de Alexandria, surgem os primeiros dispositivos automáticos:\footcite{herao}
+
+Eis uma citação bem simples:
 \begin{citacao}
 	(...) Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla
 	ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.(...)
 \end{citacao}
-
-Sendo no ICHS (ver figura \ref{fig:309}, que está na página \pageref{fig:309}), teremos uma noção melhor do movimento estudantil.
 
 \lipsum[30]
 
@@ -710,7 +720,6 @@ Sendo no ICHS (ver figura \ref{fig:309}, que está na página \pageref{fig:309})
 
 \section{Dados, dados, dados}
 % ---
-
 \lipsum[21-22]
 
 % ----------------------------------------------------------
