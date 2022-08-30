@@ -1,0 +1,161 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{boyle1772}{mvbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1a82803a4ca9424b6c10482d6c199d5}{%
+           family={Boyle},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=cc43c2e6a2fce79a1da25262af5f973f}{%
+           family={Birch},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{2}{%
+        {J.}%
+        {F. Rivington}%
+      }
+      \strng{namehash}{a1a82803a4ca9424b6c10482d6c199d5}
+      \strng{fullhash}{a1a82803a4ca9424b6c10482d6c199d5}
+      \strng{bibnamehash}{a1a82803a4ca9424b6c10482d6c199d5}
+      \strng{authorbibnamehash}{a1a82803a4ca9424b6c10482d6c199d5}
+      \strng{authornamehash}{a1a82803a4ca9424b6c10482d6c199d5}
+      \strng{authorfullhash}{a1a82803a4ca9424b6c10482d6c199d5}
+      \strng{editorbibnamehash}{cc43c2e6a2fce79a1da25262af5f973f}
+      \strng{editornamehash}{cc43c2e6a2fce79a1da25262af5f973f}
+      \strng{editorfullhash}{cc43c2e6a2fce79a1da25262af5f973f}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pagetotal}{1062}
+      \field{title}{The works of the Honourable Robert Boyle}
+      \field{volumes}{6}
+      \field{year}{1772}
+      \verb{urlraw}
+      \verb http://bit.ly/boyle-works
+      \endverb
+      \verb{url}
+      \verb http://bit.ly/boyle-works
+      \endverb
+    \endentry
+    \entry{descartes-carta-mersene}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f046e68c5b38bcc80be3d2cc6f58dd6}{%
+           family={Descartes},
+           familyi={D\bibinitperiod},
+           given={René},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{fullhash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{bibnamehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{authorbibnamehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{authornamehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{authorfullhash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientiae Studia}
+      \field{month}{03}
+      \field{number}{1}
+      \field{title}{Carta de René Descartes a Marin Mersenne}
+      \field{volume}{1}
+      \field{year}{2003}
+      \field{pages}{87\bibrangedash 92}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1590/S1678-31662003000100008
+      \endverb
+      \verb{urlraw}
+      \verb http://bit.ly/2KI0pVp
+      \endverb
+      \verb{url}
+      \verb http://bit.ly/2KI0pVp
+      \endverb
+    \endentry
+    \entry{herao}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cd09e0b1fe0f764eade1fb1031cf633c}{%
+           family={Herão},
+           familyi={H\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=e51fbadaadd14ac01a2f90b1f0a651b0}{%
+           family={Greenwood},
+           familyi={G\bibinitperiod},
+           given={Joseph\bibnamedelima George},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{2}{%
+        {Taylor, Walton}%
+        {Maberly}%
+      }
+      \strng{namehash}{cd09e0b1fe0f764eade1fb1031cf633c}
+      \strng{fullhash}{cd09e0b1fe0f764eade1fb1031cf633c}
+      \strng{bibnamehash}{cd09e0b1fe0f764eade1fb1031cf633c}
+      \strng{authorbibnamehash}{cd09e0b1fe0f764eade1fb1031cf633c}
+      \strng{authornamehash}{cd09e0b1fe0f764eade1fb1031cf633c}
+      \strng{authorfullhash}{cd09e0b1fe0f764eade1fb1031cf633c}
+      \strng{editorbibnamehash}{e51fbadaadd14ac01a2f90b1f0a651b0}
+      \strng{editornamehash}{e51fbadaadd14ac01a2f90b1f0a651b0}
+      \strng{editorfullhash}{e51fbadaadd14ac01a2f90b1f0a651b0}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The pneumatics of Hero of Alexandria, from the original Greek}
+      \field{editortype}{Trad.}
+      \field{title}{Pneumatica}
+      \field{year}{1851}
+      \field{pages}{117}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb http://bit.ly/herao
+      \endverb
+      \verb{url}
+      \verb http://bit.ly/herao
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

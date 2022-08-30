@@ -328,31 +328,8 @@ sorting=nty, % ordem alfabetica
 % Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
 % 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação % do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma % imagem da página assinada pela banca com o comando abaixo:
 %
-% \includepdf{folhadeaprovacao_final.pdf}
-%
-\begin{folhadeaprovacao}
-%
-   Dissertação defendida e aprovada em XX de XX de \the\year~ pela comissão avaliadora constituída pelos professores e professoras:
-   \vspace*{\fill}
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador(a)}
-   \vspace*{\fill}
-   \assinatura{\textbf{Prof. Oliver Heaviside, PhD.} \\ Convidada(o)}
-   \vspace*{\fill}
-   \assinatura{\textbf{Prof. William Thomson, PhD.} \\ Convidada(o)}
-   \vspace*{\fill}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-  % \vspace*{\fill}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
-  % \vspace*{\fill}
+\includepdf[scale=0.7,pages=1,nup=1x1,frame]{folha-de-aprovacao}
 
-   \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}, {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-
-\end{folhadeaprovacao}
-% ---
 
 %% ---
 %% Dedicatória
@@ -447,24 +424,24 @@ sorting=nty, % ordem alfabetica
 \cleardoublepage
 % ---
 
-% ---
-% inserir lista de abreviaturas e siglas
-% ---
-\begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
-\end{siglas}
-% ---
+%% ---
+%% inserir lista de abreviaturas e siglas
+%% ---
+%\begin{siglas}
+%  \item[ABNT] Associação Brasileira de Normas Técnicas
+%  \item[abnTeX] ABsurdas Normas para TeX
+%\end{siglas}
+%% ---
 
-% ---
-% inserir lista de símbolos
-% ---
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
+%% ---
+%% inserir lista de símbolos
+%% ---
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
 % ---
 
 % ---
@@ -488,7 +465,7 @@ sorting=nty, % ordem alfabetica
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Preparação da pesquisa}
+%\part{Preparação da pesquisa}
 % ----------------------------------------------------------
 %
 % ---
@@ -500,154 +477,146 @@ sorting=nty, % ordem alfabetica
 % ----------------------------------------------------------
 
 \section{Justificativas e Relevância}
-%
-Este documento e seu código-fonte são exemplos de referência de uso da classe \textsf{abntex2} e do pacote \textsf{biblatex-abnt}. O documento exemplifica uma realização possível entre as opções existentes na norma ABNT NBR 10520:2018 \emph{Citações em documentos -- Apresentação} e da norma ABNT NBR 6023:2018 \emph{Referências -- Elaboração}, cientes de que existe uma distância entre as ``normas'' e a interpretação das normas. Assim, antes de tudo, converse com seu orientador ou representantes do programa de pós-graduação de sua universidade, mostre uma cópia do documento PDF gerado por este arquivo e certifique-se de que não terá problas futuros com relação à aceitação ou não do modelo.
-
-A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é modelo específico de nenhuma universidade ou instituição, mas que implementa tão somente os requisitos das normas da ABNT.
+Demonstrar a importância do seu trabalho aqui.
 
 \section{Metodologia}
-De acordo com \footcite[Descartes foi um grande filósofo francês do século XVII. Veja em][p.~10]{descartes-carta-mersene},  etc... Comecemos então com um exemplo de citação, como esta aqui, feita em notas explicativas,\footcite[Esta é uma nota explicativa. Cf. e.g.,][\S 12]{boyle1772} conforme a norma NBR 10520:2018, existem dois tipos de citações em notas de rodapé:
-\begin{citacao}
+A metodologia pode ser expressa em etapas, a saber:
 	\begin{itemize}
-		\item[$3.6$] \textbf{notas de rodapé:} Indicações, observações ou aditamentos ao texto feitos pelo autor, tradutor ou editor, podendo	também aparecer na margem esquerda ou direita da mancha gráfica.
-		\item[$3.7$] \textbf{notas explicativas:} Notas usadas para comentários, esclarecimentos ou explanações, que não possam ser incluídos no texto.
+		\item etapa 1;
+		\item etapa 2.
 	\end{itemize}
-\end{citacao}
 
 
-Uma outra citação nada a ver.\footcite[Esta é uma outra nota explicativa. Ver também ][p.~12]{herao}
-%Uma outra citação nada a ver.\cite[Esta é uma outra nota explicativa. Ver também ][p.~12]{herao}. Ver também \cite{boyle1772}
+Uma outra citação nada a ver pode ser feita assim.\cite[p.~12]{herao}
 
-%\caixa{O autor não é obrigado a seguir as notas explicativas com o comando ``footcite'', que gera a essa nota explicativa.\footcite{boyle1772} Pode utilizar o estilo autor-data igualmente, mas deve seguir o mesmo padrão ao longo do texto. Por exemplo, se usar o comando ``cite'', será gerada a entrada \cite{descartes-oeuvres-volx} ou, se quiser apenas o autor, com o comando ``citeauthor'', será gerada a entrada\citeauthor[][12]{descartes-oeuvres-volx}. Ainda, se quiser imprimir apenas a data de referida obra, basta utilizar o comando ``citedate'', que gera a entrada \citedate[55]{descartes-oeuvres-volx}.}
-
-\lipsum[1]
 
 \section{Objetivos}
 
-\lipsum[7]
+\subsection{Geral}
+Pretende-se traçar um desenvolvimento histórico matemático a respeito daquele que é considerado como o maior artigo da Automação Industrial, escrito por John Doe em 1920, ``On Automation'', em que é abordado o problema da computabilidade.
 
-\lipsum[8]
+\subsection{Específicos}
 
 \section{Organização e estrutura}
 
-\lipsum*[9-11]
-
+A Referência principal do trabalho proposto é o artigo ``On Automation'', de J. Doe. Faz-se em seguida uma proposta preliminar de conteúdo, com os capítulos a serem abordados no texto:
 \begin{itemize}
-	\item item;
-	\item item;
-	\item item;
-	\item item;
+\item Capítulo I - Introdução;
+\item Capítulo II - O conceito de sistema automático na Inglaterra Vitoriana;
+\item Capítulo III - O problema da computabilidade;
+\item Capítulo IV - Considerações finais;
+\item Anexo A - Sobre os computadores (On computing);
+\item Anexo B - Como as equações entraram no cenário.
 \end{itemize}
 
-\section{Cronograma}
-
-Esta seção deve constar somente no projeto de monografia. Não deve aparecer na versão final do texto. Um exemplo de cronograma das atividades é proposto na tabela~\ref{tab:cronograma}. Você pode elaborar também tabelas online ou a partir de qualquer planilha eletrônica, inclusive em outros estilos, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Tables Generator'': \url{http://www.tablesgenerator.com/}.
-
-% Cronograma
-\begin{table}[]
-	\centering
-	\caption{Cronograma de atividades.}
-	\label{tab:cronograma}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{@{}|l|llllllllllll|@{}}
-			\toprule
-			&
-			\multicolumn{12}{c|}{\cellcolor[HTML]{FFFFFF}Meses} \\ \midrule
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} Atividades (Etapas)} &
-			\multicolumn{1}{l|}{01} &
-			\multicolumn{1}{l|}{02} &
-			\multicolumn{1}{l|}{03} &
-			\multicolumn{1}{l|}{04} &
-			\multicolumn{1}{l|}{05} &
-			\multicolumn{1}{l|}{06} &
-			\multicolumn{1}{l|}{07} &
-			\multicolumn{1}{l|}{08} &
-			\multicolumn{1}{l|}{09} &
-			\multicolumn{1}{l|}{10} &
-			\multicolumn{1}{l|}{11} &
-			12 \\ \midrule
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 1. Estudo da teoria} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\\ \midrule
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 2. Atualização bibliográfica} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\\ \midrule
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 3. Seleção de Material} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\\ \midrule
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 4. Elaboração da monografia} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			X \\ \midrule
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 5. Elaboração de Artigo} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			\multicolumn{1}{l|}{X} &
-			X \\ \midrule
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 6. Defesa da monografia} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\multicolumn{1}{l|}{} &
-			\\ \bottomrule
-		\end{tabular}%
-	}
-\end{table}
-
+%\section{Cronograma}
+%
+%Esta seção deve constar somente no projeto de monografia. Não deve aparecer na versão final do texto. Um exemplo de cronograma das atividades é proposto na tabela~\ref{tab:cronograma}. Você pode elaborar também tabelas online ou a partir de qualquer planilha eletrônica, inclusive em outros estilos, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Tables Generator'': \url{http://www.tablesgenerator.com/}.
+%
+%% Cronograma
+%\begin{table}[]
+%	\centering
+%	\caption{Cronograma de atividades.}
+%	\label{tab:cronograma}
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{@{}|l|llllllllllll|@{}}
+%			\toprule
+%			&
+%			\multicolumn{12}{c|}{\cellcolor[HTML]{FFFFFF}Meses} \\ \midrule
+%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} Atividades (Etapas)} &
+%			\multicolumn{1}{l|}{01} &
+%			\multicolumn{1}{l|}{02} &
+%			\multicolumn{1}{l|}{03} &
+%			\multicolumn{1}{l|}{04} &
+%			\multicolumn{1}{l|}{05} &
+%			\multicolumn{1}{l|}{06} &
+%			\multicolumn{1}{l|}{07} &
+%			\multicolumn{1}{l|}{08} &
+%			\multicolumn{1}{l|}{09} &
+%			\multicolumn{1}{l|}{10} &
+%			\multicolumn{1}{l|}{11} &
+%			12 \\ \midrule
+%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 1. Estudo da teoria} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\\ \midrule
+%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 2. Atualização bibliográfica} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\\ \midrule
+%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 3. Seleção de Material} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\\ \midrule
+%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 4. Elaboração da monografia} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			X \\ \midrule
+%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 5. Elaboração de Artigo} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			\multicolumn{1}{l|}{X} &
+%			X \\ \midrule
+%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 6. Defesa da monografia} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\multicolumn{1}{l|}{} &
+%			\\ \bottomrule
+%		\end{tabular}%
+%	}
+%\end{table}
 
 
 % ---
@@ -655,7 +624,7 @@ Esta seção deve constar somente no projeto de monografia. Não deve aparecer n
 % ---
 \chapter{Desenvolvimento}
 %
-Se estivermos na Escola de Minas, é bom mostrar uma fórmula:
+Uma forma de citar um autor é assim, como diria \textcite{descartes-carta-mersene}. Ou então, como uma nota explicativa.\footcite[Esta é uma nota explicativa. Cf. e.g.,][\S 12]{boyle1772}. Se quiser escrever uma fórmula:
 
 \begin{equation}
 f(x) = \int_{0}^{\infty} \arcsin \left[\ln x^2 \right] dx \,.
@@ -669,7 +638,7 @@ Sendo no ICHS (ver figura \ref{fig:309}, que está na página \pageref{fig:309})
 Inserindo uma figura. A figura \ref{fig:308} ilustra algum ponto importante.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.3]{fig09.pdf} % teste os valores
+	\includegraphics[scale=0.3]{fig09} % teste os valores
 	\caption[Legenda reduzida - aparece no sumario]{Legenda completa. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
 	\label{fig:308}
 \end{figure}
@@ -686,7 +655,7 @@ Eis uma citação bem simples:
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.4]{ichs2.jpg} % teste os valores
+	\includegraphics[scale=0.4]{ichs2} % teste os valores
 	\caption[Legenda reduzida - aparece no sumário]{Legenda completa. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
 	\label{fig:309}
 \end{figure}
@@ -694,24 +663,7 @@ Eis uma citação bem simples:
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Referencial teórico}
-% ----------------------------------------------------------
-% ---
-% Capitulo de revisão de literatura
-% ---
-\chapter{Uma breve história da teoria}
-% ---
-
-\section{Uma seção bem extravagante}
-% ---
-
-\lipsum[1]
-
-\lipsum[2-3]
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-\part{Resultados}
+%\part{Resultados}
 % ----------------------------------------------------------
 % ---
 % primeiro capitulo de Resultados
@@ -731,10 +683,10 @@ Eis uma citação bem simples:
 % ---
 % Insere arquivo de Considerações Finais ou Conclusões
 % ---
-\chapter*{Considerações finais} % esse capítulo pode ser numerado ou não
-\addcontentsline{toc}{chapter}{Conclusão}
 
-Um \emph{grand finale}: \lipsum[31-33]
+\chapter{Considerações finais} %
+
+Um \emph{grand finale}. Esse capítulo pode ser numerado ou não.
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -775,11 +727,6 @@ Um \emph{grand finale}: \lipsum[31-33]
 % ----------------------------------------------------------
 \lipsum[50]
 
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-	ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
 \end{apendicesenv}
 % ---
 
@@ -802,29 +749,6 @@ Um \emph{grand finale}: \lipsum[31-33]
 % ---
 \lipsum[30]
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-	ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-	parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
 % ---
 \end{anexosenv}
 
