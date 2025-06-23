@@ -70,6 +70,9 @@
 \graphicspath{{figuras/}} % pasta para figuras
 \DeclareGraphicsExtensions{.pdf,.eps,.svg,.png,.jpg,.bmp}
 
+% figuras em paisagem
+\usepackage{lscape}
+
 \usepackage{indentfirst} % para identação no primeiro parágrafo
 \usepackage{booktabs}
 \usepackage{microtype} 	% justificação
@@ -133,7 +136,6 @@
 \tipotrabalho{Monografia de Graduação}
 \preambulo{Trabalho apresentado ao Colegiado do Curso de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto como parte dos requisitos para a obtenção do Grau de Engenheiro(a) de Controle e Automação.}
 % ---
-
 
 % ---
 % Aparência do PDF final
@@ -397,11 +399,26 @@ Um exemplo de citação em nota explicativas pode ser visto aqui.\footnote{Esta 
 
 Um outra outra forma de citação em nota explicativa pode ser elaborada\footnote{Escreva sua nota explicativa aqui, conforme \cite{boyle1772}.}
 
+Se preferir citar apenas o título da obra, como, por exemplo \citetitle{lima2025}
+
 Um exemplo de citação direta pode ser feito. Conforme aconselha \textcite{boyle1772-a}:
+
+
 
 \begin{citacao}
 	(...) Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.(...)
 \end{citacao}
+
+Segundo \cite{lima2025}, tem-se que...
+
+Se qjuiser utilizar notas explicativas, fazer assim ó\footnote{Este artigo é muito importante para a área. Ver em \textcite[p.4]{lima2025}.}
+
+Alternativavemte, segundo a expressão presente em \textcite[p.~3]{lima2025}, apresentada na equação \eqref{eq2p2}, vemos que:
+
+\begin{eqnarray}
+	\lim_{\alpha / L \to 0} K  \left[-16 {{\frac{\alpha}{L}}^{2}}\right]  &=& K(0) \label{eq2p1} \nonumber \\ % salta linha
+	&=& \int_{0}^{\pi / 2} 1 d\theta \label{eq2p2}
+\end{eqnarray}
 
 \section{Exemplo de tabela}
 
@@ -430,6 +447,100 @@ Um exemplo de tabela é apresentada na tabela~\ref{tab:001}.
 
 Você pode elaborar também tabelas online ou a partir de qualquer planilha eletrônica, inclusive em outros estilos, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Tables Generator'': \url{http://www.tablesgenerator.com/}.
 
+
+%%%%%
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[]
+	\caption{Uma legenda para esta tabela}
+	\label{tab:my-table}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lllllll}
+			\multicolumn{7}{l}{\textbf{Arquitetura e Urbanismo}}                                                                              \\
+			&               &               &                         &                                      &               &  \\
+			\multicolumn{7}{l}{\textbf{1º período}}                                                                                           \\
+			\textit{\textbf{HORA}} &
+			\textit{\textbf{SEGUNDA}} &
+			\textit{\textbf{TERÇA}} &
+			\textit{\textbf{QUARTA}} &
+			\textit{\textbf{QUINTA}} &
+			\textit{\textbf{SEXTA}} &
+			\textit{\textbf{SÁBADO}} \\
+			\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                      \\
+			07:30 / 08:20 &               &               &                         &                                      &               &  \\
+			08:20 / 09:10 &               &               &                         &                                      &               &  \\
+			09:20 / 10:10 &               &               &                         &                                      &               &  \\
+			10:10 / 11:00 &               &               &                         &                                      &               &  \\
+			11:10 / 12:00 &               &               &                         &                                      &               &  \\
+			12:00 / 12:50 &               &               &                         &                                      &               &  \\
+			\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                      \\
+			13:30 / 14:20 &               &               &                         &                                      &               &  \\
+			14:20 / 15:10 &               &               &                         &                                      &               &  \\
+			15:20 / 16:10 &               &               &                         &                                      &               &  \\
+			16:10 / 17:00 &               &               &                         &                                      &               &  \\
+			17:10 / 18:00 &               &               & {\color[HTML]{FF0000} } &                                      &               &  \\
+			18:00 / 18:50 &               &               & {\color[HTML]{FF0000} } &                                      &               &  \\
+			\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                      \\
+			19:00 / 19:50 & ARQ111 – 11 T & ARQ110 – 11 P & MTM500 – 33 T           & {\color[HTML]{434343} ARQ120 – 11T}  & ARQ100 – 11 P &  \\
+			19:50 / 20:40 & ARQ111 – 11 T & ARQ110 – 11 P & MTM500 – 33 T           & {\color[HTML]{434343} ARQ120 – 11 T} & ARQ100 – 11 P &  \\
+			21:00 / 21:50 & ARQ111 – 11 T & ARQ111 – 11 T & ARQ110 – 11 P           & ARQ111 – 11 P                        & MTM500 – 33 T &  \\
+			21:50 / 22:40 & ARQ111 – 11 T & ARQ111 – 11 T & ARQ110 – 11 P           & ARQ111 – 11 P                        & MTM500 – 33 T &  \\
+			\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                     
+		\end{tabular}%
+	}
+\end{table}
+
+
+Agora, a mesma tabela em uma página separada, mas no formato paisagem:
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+% \usepackage{lscape}
+\begin{landscape}
+	\begin{table}[p]
+		\caption{Uma legenda para esta tabela}
+		\label{tab:my-table2}
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{lllllll}
+				\multicolumn{7}{l}{\textbf{Arquitetura e Urbanismo}}                                                                              \\
+				&               &               &                         &                                      &               &  \\
+				\multicolumn{7}{l}{\textbf{1º período}}                                                                                           \\
+				\textit{\textbf{HORA}} &
+				\textit{\textbf{SEGUNDA}} &
+				\textit{\textbf{TERÇA}} &
+				\textit{\textbf{QUARTA}} &
+				\textit{\textbf{QUINTA}} &
+				\textit{\textbf{SEXTA}} &
+				\textit{\textbf{SÁBADO}} \\
+				\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                      \\
+				07:30 / 08:20 &               &               &                         &                                      &               &  \\
+				08:20 / 09:10 &               &               &                         &                                      &               &  \\
+				09:20 / 10:10 &               &               &                         &                                      &               &  \\
+				10:10 / 11:00 &               &               &                         &                                      &               &  \\
+				11:10 / 12:00 &               &               &                         &                                      &               &  \\
+				12:00 / 12:50 &               &               &                         &                                      &               &  \\
+				\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                      \\
+				13:30 / 14:20 &               &               &                         &                                      &               &  \\
+				14:20 / 15:10 &               &               &                         &                                      &               &  \\
+				15:20 / 16:10 &               &               &                         &                                      &               &  \\
+				16:10 / 17:00 &               &               &                         &                                      &               &  \\
+				17:10 / 18:00 &               &               & {\color[HTML]{FF0000} } &                                      &               &  \\
+				18:00 / 18:50 &               &               & {\color[HTML]{FF0000} } &                                      &               &  \\
+				\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                      \\
+				19:00 / 19:50 & ARQ111 – 11 T & ARQ110 – 11 P & MTM500 – 33 T           & {\color[HTML]{434343} ARQ120 – 11T}  & ARQ100 – 11 P &  \\
+				19:50 / 20:40 & ARQ111 – 11 T & ARQ110 – 11 P & MTM500 – 33 T           & {\color[HTML]{434343} ARQ120 – 11 T} & ARQ100 – 11 P &  \\
+				21:00 / 21:50 & ARQ111 – 11 T & ARQ111 – 11 T & ARQ110 – 11 P           & ARQ111 – 11 P                        & MTM500 – 33 T &  \\
+				21:50 / 22:40 & ARQ111 – 11 T & ARQ111 – 11 T & ARQ110 – 11 P           & ARQ111 – 11 P                        & MTM500 – 33 T &  \\
+				\multicolumn{7}{l}{\cellcolor[HTML]{D9D9D9}}                                                                                     
+			\end{tabular}%
+		}
+	\end{table}
+\end{landscape}
 % ---
 \chapter{Desenvolvimento} \label{cap:desenvolvimento}
 
@@ -466,6 +577,13 @@ Se for desenvolvido no ICHS (ver figura \ref{fig:309}), tem-se uma noção melho
 	\label{fig:309}
 \end{figure}
 
+\section*{Um estudo sobre as figuras} % exemplo de ambiente sem numeração
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{fig09.pdf}
+\caption[Escritório de telégrafos]{Escritório de telegrafia do século XIX. Fonte: \textcite{thomson_1869}.}
+\end{figure}
 
 
 \section{Uma seção extravagante}
