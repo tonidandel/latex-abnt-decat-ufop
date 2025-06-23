@@ -13,4 +13,4 @@ title: Home
 
 ### Autor
 
-Prof. Dr. Danny A. V. Tonidandel - Departamento de Engenharia de Controle & Automação - DECAT - Escola de Minas  - UFOP
+Prof. Dr. Danny A. V. Tonidandel - Dep. de Engenharia de Controle & Automação - Escola de Minas  - UFOP
