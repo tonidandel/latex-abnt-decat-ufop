@@ -252,7 +252,7 @@
 % Epígrafe - Opcional
 \begin{epigrafe}
     \vspace*{\fill}
-\epigraph{\textsl{Sua epígrafe aqui.}}{---~Autor.}
+\epigraph{\textsl{Sua epígrafe aqui.}}{---~Autor da epígrafe.}
 \end{epigrafe}
 % ---
 
@@ -382,39 +382,20 @@ Escreva seus objetivos aqui. Se preferir explicitar objetivos geral e específic
 
 A estrutura e organização deve apresentar os assuntos abordados ao longo do seu texto. Por exemplo, no capítulo \ref{cap:revisao-de-literatura} são apresentados e discutidos os principais trabalhos neste campo de pesquisa. Já no capítulo \ref{cap:desenvolvimento}, que, por acaso, começa na página \pageref{cap:desenvolvimento}, o trabalho é desenvolvido.
 
-Um exemplo de tabela é apresentada na tabela~\ref{tab:001}. Você pode elaborar também tabelas online ou a partir de qualquer planilha eletrônica, inclusive em outros estilos, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Tables Generator'': \url{http://www.tablesgenerator.com/}.
 
-% Please add the following required packages to your document preamble:
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[h]
-\centering
-\caption{Uma tabela}
-\label{tab:001}
-\resizebox{0.5\textwidth}{!}{%
-\begin{tabular}{|l|llllllllll|}
-\hline
-                                   & \multicolumn{10}{l|}{\cellcolor[HTML]{FF0000}\textbf{Meses}}                                                                                                                                                                         \\ \hline
-\cellcolor[HTML]{5EB91E}           & \multicolumn{1}{l|}{1} & \multicolumn{1}{l|}{2} & \multicolumn{1}{l|}{3} & \multicolumn{1}{l|}{4} & \multicolumn{1}{l|}{5} & \multicolumn{1}{l|}{6} & \multicolumn{1}{l|}{7}  & \multicolumn{1}{l|}{8} & \multicolumn{1}{l|}{9} & 10 \\ \hline
-\cellcolor[HTML]{5EB91E}\textbf{1} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
-\cellcolor[HTML]{5EB91E}\textbf{2} & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & x  \\ \hline
-\cellcolor[HTML]{5EB91E}\textbf{3} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
-\cellcolor[HTML]{5EB91E}\textbf{4} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
-\cellcolor[HTML]{5EB91E}\textbf{5} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
-\cellcolor[HTML]{5EB91E}\textbf{6} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
-\end{tabular}%
-}
-\end{table}
 
 % Capitulo de revisão de literatura
 \chapter{Revisão de literatura} \label{cap:revisao-de-literatura}
+
+\section{Exemplos de citações}
 
 Um capítulo de revisão de literatura, também chamado de revisão teórica ou bibliográfica pode ser desenvolvido aqui. Procure dissertar sobre os autores e trabalhos mais relevantes em seu campo de estudo, em um diálogo com sua proposta. Um exemplo de citação em linha pode ser visto como em \textcite{Einstein1920}. 
 
 Um exemplo de citação do tipo autor-data pode também ser elaborado \cite{Einstein1920}. 
 
-Um exemplo de citação em nota de de rodapé, com notas explicativas pode ser visto aqui.\footcite[Esta nota vem antes.][p.~22]{descartes-carta-mersene} 
+Um exemplo de citação em nota explicativas pode ser visto aqui.\footnote{Esta nota vem antes. Ver em \textcite[p.~22]{descartes-carta-mersene}} 
 
-Um outra outra forma de citação em nota explicativa pode ser elaborada\footnote{Escreva sua nota explicativa aqui, conforme \textcite{boyle1772}.}
+Um outra outra forma de citação em nota explicativa pode ser elaborada\footnote{Escreva sua nota explicativa aqui, conforme \cite{boyle1772}.}
 
 Um exemplo de citação direta pode ser feito. Conforme aconselha \textcite{boyle1772-a}:
 
@@ -422,7 +403,32 @@ Um exemplo de citação direta pode ser feito. Conforme aconselha \textcite{boyl
 	(...) Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.(...)
 \end{citacao}
 
+\section{Exemplo de tabela}
 
+Um exemplo de tabela é apresentada na tabela~\ref{tab:001}. 
+
+% Please add the following required packages to your document preamble:
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h!]
+	\centering
+	\caption{Uma tabela}
+	\label{tab:001}
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{|l|llllllllll|}
+			\hline
+			& \multicolumn{10}{l|}{\cellcolor[HTML]{FF0000}\textbf{Meses}}                                                                                                                                                                         \\ \hline
+			\cellcolor[HTML]{5EB91E}           & \multicolumn{1}{l|}{1} & \multicolumn{1}{l|}{2} & \multicolumn{1}{l|}{3} & \multicolumn{1}{l|}{4} & \multicolumn{1}{l|}{5} & \multicolumn{1}{l|}{6} & \multicolumn{1}{l|}{7}  & \multicolumn{1}{l|}{8} & \multicolumn{1}{l|}{9} & 10 \\ \hline
+			\cellcolor[HTML]{5EB91E}\textbf{1} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+			\cellcolor[HTML]{5EB91E}\textbf{2} & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & x  \\ \hline
+			\cellcolor[HTML]{5EB91E}\textbf{3} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+			\cellcolor[HTML]{5EB91E}\textbf{4} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+			\cellcolor[HTML]{5EB91E}\textbf{5} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+			\cellcolor[HTML]{5EB91E}\textbf{6} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+
+Você pode elaborar também tabelas online ou a partir de qualquer planilha eletrônica, inclusive em outros estilos, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Tables Generator'': \url{http://www.tablesgenerator.com/}.
 
 % ---
 \chapter{Desenvolvimento} \label{cap:desenvolvimento}
