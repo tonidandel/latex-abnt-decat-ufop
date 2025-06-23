@@ -1,8 +1,4 @@
 % Magic comments - Informa ao compilador algumas regras de execução, como tipo de compilação ou codificação do texto
-% !TeX root = template-abnt-ufop-escola-de-minas.tex
-% !TeX encoding = UTF-8
-% !BIB TS-program = XeLaTex
-% !backend = biber
 
 %% abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
 %% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/
@@ -49,7 +45,7 @@
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em verso e anverso. Oposto a oneside
+	oneside,			% p/ impressão verso e anverso: twoside
 	a4paper,			% tamanho do papel.
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -64,61 +60,48 @@
 % ---
 % Pacotes básicos
 % ---
-% Inclusão de gráficos
-\usepackage{graphicx}
-% tabelas
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{booktabs}
-% pasta de figuras
-\graphicspath{{figuras/}}
-% extensões permitidas
+
+\usepackage{graphicx} 	% gráficos
+\usepackage[table,xcdraw]{xcolor}	% tabelas
+\graphicspath{{figuras/}} % pasta para figuras
 \DeclareGraphicsExtensions{.pdf,.eps,.svg,.png,.jpg,.bmp}
 
-\usepackage{microtype} 			% para melhorias de justificação
-\usepackage{amsmath,amssymb,unicode-math} % escrita matematica
-\usepackage{relsize} % readicionado comando \part não funciona. Ver: https://github.com/abntex/abntex2/issues/109
+\usepackage{indentfirst} % para identação no primeiro parágrafo
+\usepackage{booktabs}
+\usepackage{microtype} 	% justificação
 \usepackage{verbatim}
 
-% para incluir páginas pdf diretamente no documento
-\usepackage{pdfpages}
+% Pacotes de escrita matemática
+\usepackage{amsmath,amssymb,unicode-math}
+
+
+\usepackage{pdfpages} %  anexar pdf diretamente no documento
 \usepackage{csquotes}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Pacotes de citações: retire o comentário do estilo que deseja usar
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Usando o pacote biblatex-abnt e o biber para a compilacao das fontes
+% Citações
 
-% Opção 1: notas de referência, com citações reduzidas (idem, ibidem opcit...)
-%\usepackage[backend=biber,
-%style=abnt-ibid,
-%sccite,
-%scbib,
-%justify,
-%extrayear,
-%citecount,
-%noslsn,
-%backref,
-%repeatfields]{biblatex}
 
 % Opção 2: notas explicativas no sistema autor-data
 \usepackage[backend=biber,
-% configuracoes do estilo abnt
-style=abnt,
-sccite, % sobrenomes em caixa alta
-ittitles, % Titulos em italico
-citecount, % contar o número de citações
-scbib, % biliografia em caixa alta
-justify,
-noslsn,
-repeatfields,
-sorting=nty, % ordem alfabetica
-]{biblatex}
+% % configuracoes do estilo abnt
+ style=abnt,
+ sccite, % sobrenomes em caixa alta
+ ittitles, % Titulos em italico
+ citecount, % contar o número de citações
+ scbib, % biliografia em caixa alta
+ justify, % alinhamento justificado
+ noslsn,
+ repeatfields,
+ sorting=nty, % ordem alfabetica
+ ]{biblatex}
 
 % ARQUIVO COM AS REFERÊNCIAS BIBLIOGRAFICAS
 \addbibresource{referencias.bib}
 
 % ---
-% Personalização do estilo biblatex-abnt - por Danny A. V Tonidandel
+% Personalização do estilo biblatex-abnt
+%Danny A. V. Tonidandel
+
 % Adequa as urls de acordo com normas 6023:2018
 \DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\addspace \url{#1}}%
 \DeclareFieldFormat{urldate}{\bibstring{urlseen}\addcolon\addspace #1}%
@@ -128,35 +111,28 @@ sorting=nty, % ordem alfabetica
 \@addtoreset{footnote}{chapter}
 \makeatother
 
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2 - podem ser removidos
-% ---
-% Pacotes adicionais, usados no anexo do modelo de folha de identificação
-% ---
-% Tabelas
-\usepackage{supertabular}
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{lipsum}	% para geração de dummy text
+% Pacotes adicionais - podem ser comentados
+\usepackage{lipsum}	% para geração de texto aleatório
 % ---
 
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Modelo ABNT (Template) \LaTeX~ para Monografias - Curso de Engenharia de Controle \& Automação - DECAT - UFOP}
-\autor{Amy Farah Fawler}
+\titulo{Controle de motores de indução}
+\autor{João da Silva}
 \local{Ouro Preto}
 \data{\the\year} % imprime o ano corrente no campo data
-\orientador{Profa. Marie S. Curie, PhD.}
-\coorientador{Prof. A. de Saint-Exupéry, PhD.}
+\orientador{Prof. Paulo Monteiro}
+\coorientador{Profa. Luciana Castanheira}
 \instituicao{Universidade Federal de Ouro Preto}
 \tipotrabalho{Monografia de Graduação}
-\preambulo{Trabalho apresentado ao Colegiado do Curso de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto como parte dos requisitos para a obtenção do Grau de Engenheira(o) de Controle e Automação.}
+\preambulo{Trabalho apresentado ao Colegiado do Curso de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto como parte dos requisitos para a obtenção do Grau de Engenheiro(a) de Controle e Automação.}
 % ---
 
 
 % ---
-% Configurações de aparência do PDF final
+% Aparência do PDF final
 
 % alterando o aspecto da cor azul
 \definecolor{blue}{RGB}{41,5,195}
@@ -169,13 +145,12 @@ sorting=nty, % ordem alfabetica
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={ufop}{latex}{abntex}{decat}{monografia},
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      		% color of file links
-		urlcolor=blue,
-		%bookmarksdepth=4
+		pdfkeywords={ufop}{latex}{decat}{monografia},
+		colorlinks=true,   % opções: false, true
+    	linkcolor=blue,    % cor de links internos
+    	citecolor=blue,    % cor de links na bibliografia
+    	filecolor=magenta, % color de links para arquivos
+		urlcolor=blue,     % cor de hiperlinks (urls)
 }
 \makeatother
 % ---
@@ -184,35 +159,25 @@ sorting=nty, % ordem alfabetica
 % Espaçamentos entre linhas e parágrafos
 % ---
 
-% O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.3cm}
+\setlength{\parindent}{1.3cm} % Tamanho do parágrafo
 
-% Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.2cm}  % tente também \onelineskip
 
-% ---
-% compila o indice
-% ---
-\makeindex
-% ---
+\setlength{\parskip}{0.2cm} % Espaçamento entre parágrafos
+% tente também \onelineskip
 
-% ----
-% Início do documento
-% ----
-\begin{document}
 
-% Retira espaço extra obsoleto entre as frases.
-\frenchspacing
+\makeindex % compila o indice
 
-% ----------------------------------------------------------
-% ELEMENTOS PRÉ-TEXTUAIS
-% ----------------------------------------------------------
+
+\begin{document} % Início do documento
+
+\frenchspacing % Retira espaço obsoleto
+
+% Pré-TextualEXTUAIS
 % \pretextual
 
-% ---
-% Capa
-% ---
-%\imprimircapa
+% Capa - obrigatório
+
 \begin{capa}
 	\thispagestyle{empty}
 		\centering
@@ -251,114 +216,39 @@ sorting=nty, % ordem alfabetica
 {\large\imprimirtipotrabalho}
 \vspace*{\fill}
 
-{\large\imprimirlocal}, {\large\imprimirdata}
+{\large\imprimirlocal}, {\large \the\year}
 %\par
 \vspace*{1cm}
 	\end{center}
 \end{capa}
 
-% ---
-
-% ---
-% Folha de rosto
-% (o * indica que haverá a ficha bibliográfica)
-% ---
-\imprimirfolhaderosto*
-% ---
 
 
-% ---
-% Inserir a ficha bibliográfica
-% ---
+% Folha de rosto [OBRIGATÓRIO]
+\imprimirfolhaderosto
+% \imprimirfolhaderosto* se quiser ficha catalográfica
 
-% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
-% catalogação-na-publicação''.
-% Porém, a biblioteca da sua universidade lhe fornecerá um PDF
-% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
-% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
-% o conteúdo de implementação deste arquivo pelo comando abaixo que está comentado
-% (nao se esqueça de comentar o antigo ambiente de ficha catalográfica):
-%
+% Ficha bibliográfica [OPCIONAL,segundo determinação CECAU  e DECAT, 29/03/2023]
 % \begin{fichacatalografica}
 %     \includepdf{fig_ficha_catalografica.pdf}
 % \end{fichacatalografica}
-%
-%
-% Ou, você poderá também ler os dados da ficha e adicionar no póprio código
-% como as palavras-chave, CDU e dimensões do trabalho:
-\begin{fichacatalografica}
-	\vspace*{\fill}					% Posição vertical
-	\hrule							% Linha horizontal
-	\begin{center}					% Minipage Centralizado
-	\begin{minipage}[c]{12.5cm}		% Largura
-
-	\imprimirautor
-
-	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-	\imprimirlocal, \imprimirdata-
-
-	\hspace{0.5cm}  p. : il. (algumas color.) ; 30 cm.\\
-
-	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-
-	\hspace{0.5cm}
-	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-	\imprimirdata.}\\
-
-	\hspace{0.5cm}
-		1. Palavra-chave1.
-		2. Palavra-chave2.
-		I. Orientador.
-		II. Universidade Federal de Ouro Preto.
-		III. Instituto de Ciências Humanas e Sociais.
-		IV. Título\\
-
-	\hspace{8.75cm} CDU 02:141:005.7\\
-
-	\end{minipage}
-	\end{center}
-	\hrule
-\end{fichacatalografica}
-% ---
-
-% ---
-% Inserir folha de aprovação
-% ---
-
-% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
-% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação % do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma % imagem da página assinada pela banca com o comando abaixo:
-%
-\includepdf[scale=0.7,pages=1,nup=1x1,frame]{folha-de-aprovacao}
 
 
-%% ---
-%% Dedicatória
-%% ---
-%\begin{dedicatoria}
-%   \vspace*{\fill}
-%   \flushright
-%   \noindent
-%   \textit{Dedico esse trabalho a} \vspace*{\fill}
-%\end{dedicatoria}
-%% ---
+% Folha de aprovação - Obrigatório NBR 14724/2011
+\begin{folhadeaprovacao}
+\includepdf{folha-de-aprovacao.pdf}
+\end{folhadeaprovacao}
 
-% ---
-% Agradecimentos
-% ---
+
+% Agradecimentos - opcional
 \begin{agradecimentos}
-\noindent Os agradecimentos vem aqui...
-
+\noindent Os agradecimentos [são opcionais, e] vem aqui...
 \end{agradecimentos}
-% ---
 
-% ---
-% Epígrafe
-% ---
+% Epígrafe - Opcional
 \begin{epigrafe}
     \vspace*{\fill}
-	\begin{flushright}
-		\textit{``Matéria é a parte acidental.'' (Oliver Lodge)}
-	\end{flushright}
+\epigraph{\textsl{Júpiter leva 4332 dias para fazer uma revolução.}}{---~Oliver Lodge.}
 \end{epigrafe}
 % ---
 
@@ -390,303 +280,206 @@ sorting=nty, % ordem alfabetica
  \end{otherlanguage*}
 \end{resumo}
 
-% resumo em francês
-%\begin{resumo}[Résumé]
-% \begin{otherlanguage*}{french}
-%    Il s'agit d'un résumé en français.
-%
-%   \textbf{Mots-clés}: latex. abntex. publication de textes.
-% \end{otherlanguage*}
-%\end{resumo}
-%
-%% resumo em espanhol
-%\begin{resumo}[Resumen]
-% \begin{otherlanguage*}{spanish}
-%   Este es el resumen en español.
-%
-%   \textbf{Palabras clave}: latex. abntex. publicación de textos.
-% \end{otherlanguage*}
-%\end{resumo}
-%% ---
-% ---
-% inserir lista de ilustrações
-% ---
+
+% Lista de ilustrações
 \pdfbookmark[0]{\listfigurename}{lof}
 \listoffigures*
 \cleardoublepage
 % ---
 
-% ---
 % inserir lista de tabelas
-% ---
 \pdfbookmark[0]{\listtablename}{lot}
 \listoftables*
 \cleardoublepage
 % ---
 
-%% ---
-%% inserir lista de abreviaturas e siglas
-%% ---
-%\begin{siglas}
-%  \item[ABNT] Associação Brasileira de Normas Técnicas
-%  \item[abnTeX] ABsurdas Normas para TeX
-%\end{siglas}
-%% ---
+% ---
+% Lista de abreviaturas e siglas [OPCIONAL]
+% ---
 
-%% ---
-%% inserir lista de símbolos
-%% ---
-%\begin{simbolos}
-%  \item[$ \Gamma $] Letra grega Gama
-%  \item[$ \Lambda $] Lambda
-%  \item[$ \zeta $] Letra grega minúscula zeta
-%  \item[$ \in $] Pertence
-%\end{simbolos}
+\begin{siglas}
+  \item[ABNT] Associação Brasileira de Normas Técnicas
+  \item[abnTeX] ABsurdas Normas para TeX
+\end{siglas}
+% ---
+
+%---
+% Lista de símbolos [OPCIONAL]
+%---
+\begin{simbolos}
+  \item[$ \Gamma $] Letra grega Gama
+  \item[$ \Lambda $] Lambda
+  \item[$ \zeta $] Letra grega minúscula zeta
+  \item[$ \in $] Pertence
+\end{simbolos}
 % ---
 
 % ---
-% inserir o sumario
+% Sumário
 % ---
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
-% ---
-% Comando para resetar contadores das notas de rodapé
+
+
+% Reinicia contadores das notas de rodapé
 \makeatletter
 \@addtoreset{footnote}{chapter}
 \makeatother
 
 
 
-% ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
-% ----------------------------------------------------------
+
 \textual
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-%\part{Preparação da pesquisa}
-% ----------------------------------------------------------
-%
-% ---
+
 % Modelo de capitulo com a introducao, objetivos e estrutura do texto
-% ---
-% ----------------------------------------------------------
+
+% --
 \chapter[Introdução]{Introdução}
-%\addcontentsline{toc}{chapter}{Introdução}
-% ----------------------------------------------------------
+
+Este documento e seu código-fonte são exemplos de referência de uso da classe \textsf{abntex2} e do pacote \textsf{biblatex-abnt}. O documento exemplifica uma realização possível entre as opções existentes na norma ABNT NBR 10520:2018 \emph{Citações em documentos -- Apresentação} e da norma ABNT NBR 6023:2018 \emph{Referências -- Elaboração}, cientes de que existe uma distância entre as ``normas'' e a interpretação das normas. Assim, antes de tudo, converse com seu orientador ou representantes do programa de pós-graduação de sua universidade, mostre uma cópia do documento PDF gerado por este arquivo e certifique-se de que não terá problemas futuros com relação à aceitação ou não do modelo.
 
 \section{Justificativas e Relevância}
-Demonstrar a importância do seu trabalho aqui.
 
-\section{Metodologia}
-A metodologia pode ser expressa em etapas, a saber:
-	\begin{itemize}
-		\item etapa 1;
-		\item etapa 2.
-	\end{itemize}
+Um exemplo de citação em linha pode ser visto como em \textcite{Einstein1920}.
 
+Um exemplo de citação do tipo autor-data pode também ser elaborado \cite{Einstein1920}.
 
-Uma outra citação nada a ver pode ser feita assim.\cite[p.~12]{herao}
+Um exemplo de citação em nota de de rodapé, com notas explicativas pode ser visto aqui.\footcite[Esta nota vem antes.][p.~22]{descartes-carta-mersene}
 
+Um outra outra forma de citação em nota explicativa pode ser elaborada\footnote{Escreva sua nota explicativa aqui, conforme \textcite{boyle1772}.}
+
+\section{Materiais e Métodos}
+Uma estrutura de tópicos é muito comum em metodologias. Uma forma de fazê-lo é utilizando o comando ``itemize'':
+
+\begin{itemize}
+	\item Tópico 1;
+	\item Tópico 2;
+	\item etc.
+\end{itemize}
+
+Se preferir itens numerados, utilizar o ambiente ``Enumerate'':
+	\begin{enumerate}
+	\item Tópico 1;
+	\item Tópico 2.
+\end{enumerate}
 
 \section{Objetivos}
-
-\subsection{Geral}
-Pretende-se traçar um desenvolvimento histórico matemático a respeito daquele que é considerado como o maior artigo da Automação Industrial, escrito por John Doe em 1920, ``On Automation'', em que é abordado o problema da computabilidade.
-
-\subsection{Específicos}
+Escreva seus objetivos aqui. Se preferir explicitar objetivos geral e específico, basta adicionar subseções.
+%\subsection*{Geral}
+%Este é um objetivo geral.
+%
+%\subsection*{Específicos}
+%Os objetivos secundários podem ser explicitados aqui.
+%
 
 \section{Organização e estrutura}
 
-A Referência principal do trabalho proposto é o artigo ``On Automation'', de J. Doe. Faz-se em seguida uma proposta preliminar de conteúdo, com os capítulos a serem abordados no texto:
-\begin{itemize}
-\item Capítulo I - Introdução;
-\item Capítulo II - O conceito de sistema automático na Inglaterra Vitoriana;
-\item Capítulo III - O problema da computabilidade;
-\item Capítulo IV - Considerações finais;
-\item Anexo A - Sobre os computadores (On computing);
-\item Anexo B - Como as equações entraram no cenário.
-\end{itemize}
+A estrutura e organização deve apresentar os assuntos abordados ao longo do seu texto. Por exemplo, no capítulo \ref{cap:revisao-de-literatura} são apresentados e discutidos os principais trabalhos neste campo de pesquisa. Já no capítulo \ref{cap:desenvolvimento}, que, por acaso, começa na página \pageref{cap:desenvolvimento}, o trabalho é desenvolvido.
 
-%\section{Cronograma}
-%
-%Esta seção deve constar somente no projeto de monografia. Não deve aparecer na versão final do texto. Um exemplo de cronograma das atividades é proposto na tabela~\ref{tab:cronograma}. Você pode elaborar também tabelas online ou a partir de qualquer planilha eletrônica, inclusive em outros estilos, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Tables Generator'': \url{http://www.tablesgenerator.com/}.
-%
-%% Cronograma
-%\begin{table}[]
-%	\centering
-%	\caption{Cronograma de atividades.}
-%	\label{tab:cronograma}
-%	\resizebox{\textwidth}{!}{%
-%		\begin{tabular}{@{}|l|llllllllllll|@{}}
-%			\toprule
-%			&
-%			\multicolumn{12}{c|}{\cellcolor[HTML]{FFFFFF}Meses} \\ \midrule
-%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} Atividades (Etapas)} &
-%			\multicolumn{1}{l|}{01} &
-%			\multicolumn{1}{l|}{02} &
-%			\multicolumn{1}{l|}{03} &
-%			\multicolumn{1}{l|}{04} &
-%			\multicolumn{1}{l|}{05} &
-%			\multicolumn{1}{l|}{06} &
-%			\multicolumn{1}{l|}{07} &
-%			\multicolumn{1}{l|}{08} &
-%			\multicolumn{1}{l|}{09} &
-%			\multicolumn{1}{l|}{10} &
-%			\multicolumn{1}{l|}{11} &
-%			12 \\ \midrule
-%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 1. Estudo da teoria} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\\ \midrule
-%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 2. Atualização bibliográfica} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\\ \midrule
-%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 3. Seleção de Material} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\\ \midrule
-%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 4. Elaboração da monografia} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			X \\ \midrule
-%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 5. Elaboração de Artigo} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			\multicolumn{1}{l|}{X} &
-%			X \\ \midrule
-%			\cellcolor[HTML]{FFFFFF}{\color[HTML]{343434} 6. Defesa da monografia} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\multicolumn{1}{l|}{} &
-%			\\ \bottomrule
-%		\end{tabular}%
-%	}
-%\end{table}
+Um exemplo de tabela é apresentada na tabela~\ref{tab:001}. Você pode elaborar também tabelas online ou a partir de qualquer planilha eletrônica, inclusive em outros estilos, gerando o código em \LaTeX. Após isso, basta copiar e colar o código aqui. Um exemplo de site é o ``Tables Generator'': \url{http://www.tablesgenerator.com/}.
+
+% Please add the following required packages to your document preamble:
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h]
+\centering
+\caption{Uma tabela}
+\label{tab:001}
+\resizebox{0.5\textwidth}{!}{%
+\begin{tabular}{|l|llllllllll|}
+\hline
+                                   & \multicolumn{10}{l|}{\cellcolor[HTML]{FF0000}\textbf{Meses}}                                                                                                                                                                         \\ \hline
+\cellcolor[HTML]{5EB91E}           & \multicolumn{1}{l|}{1} & \multicolumn{1}{l|}{2} & \multicolumn{1}{l|}{3} & \multicolumn{1}{l|}{4} & \multicolumn{1}{l|}{5} & \multicolumn{1}{l|}{6} & \multicolumn{1}{l|}{7}  & \multicolumn{1}{l|}{8} & \multicolumn{1}{l|}{9} & 10 \\ \hline
+\cellcolor[HTML]{5EB91E}\textbf{1} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+\cellcolor[HTML]{5EB91E}\textbf{2} & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & x  \\ \hline
+\cellcolor[HTML]{5EB91E}\textbf{3} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+\cellcolor[HTML]{5EB91E}\textbf{4} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{x} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+\cellcolor[HTML]{5EB91E}\textbf{5} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}   & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+\cellcolor[HTML]{5EB91E}\textbf{6} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{xx} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{}  &    \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+% Capitulo de revisão de literatura
+\chapter{Revisão de literatura} \label{cap:revisao-de-literatura}
+
+Um capítulo de revisão de literatura, também chamado de revisão teórica ou bibliográfica pode ser desenvolvido aqui. Procure dissertar sobre os autores e trabalhos mais relevantes em seu campo de estudo, em um diálogo com sua proposta. Um exemplo de citação em linha pode ser visto como em \textcite{Einstein1920}. 
+
+Um exemplo de citação do tipo autor-data pode também ser elaborado \cite{Einstein1920}. 
+
+Um exemplo de citação em nota de de rodapé, com notas explicativas pode ser visto aqui.\footcite[Esta nota vem antes.][p.~22]{descartes-carta-mersene} 
+
+Um outra outra forma de citação em nota explicativa pode ser elaborada\footnote{Escreva sua nota explicativa aqui, conforme \textcite{boyle1772}.}
+
+Um exemplo de citação direta pode ser feito. Conforme aconselha \textcite{boyle1772-a}:
+
+\begin{citacao}
+	(...) Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.(...)
+\end{citacao}
+
 
 
 % ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo
-% ---
-\chapter{Desenvolvimento}
-%
-Uma forma de citar um autor é assim, como diria \textcite{descartes-carta-mersene}. Ou então, como uma nota explicativa.\footcite[Esta é uma nota explicativa. Cf. e.g.,][\S 12]{boyle1772}. Se quiser escrever uma fórmula:
+\chapter{Desenvolvimento} \label{cap:desenvolvimento}
 
+Caso seja um trabalho oriundo da Escola de Minas ou do ICEB, é conveniente apresentar uma fórmula:
 \begin{equation}
-f(x) = \int_{0}^{\infty} \arcsin \left[\ln x^2 \right] dx \,.
-\label{eq:01}
+f(x) = \int \limits_{0}^{+ \infty} \tanh \left[\ln (j \omega)^2 \right] dx \,. \label{eq:01}
 \end{equation}
 
-Conforme a equação \eqref{eq:01}, que está na página \pageref{eq:01}, temos que...
+Lembre-se: equações fazem parte do texto e, por isso, devem ser pontuadas! Assim, conforme a equação \eqref{eq:02}, que está na página \pageref{eq:02}, tem-se uma demonstração. Um outro exemplo é :
+\begin{equation}
+\lim\limits_{x \to 0} \frac{\sin (x)}{x} = 1 \,. 
+\label{eq:02}
+\end{equation}
 
-Sendo no ICHS (ver figura \ref{fig:309}, que está na página \pageref{fig:309}), teremos uma noção melhor do movimento estudantil.
+Pode-se também escrever equações na linha, como $E = m c^2\,,$ mas somente para expressões menores.
 
-Inserindo uma figura. A figura \ref{fig:308} ilustra algum ponto importante.
-\begin{figure}[htbp]
+Se for desenvolvido no ICHS (ver figura \ref{fig:309}), tem-se uma noção melhor do movimento estudantil. A figura \ref{fig:308} ilustra bem o fato.
+
+% uma figura
+\begin{figure}[h] % o ``h'' significa colocar a figura aqui (here)
 	\centering
-	\includegraphics[scale=0.3]{fig09} % teste os valores
-	\caption[Legenda reduzida - aparece no sumario]{Legenda completa. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
+	\includegraphics[scale=0.3]{fig09.pdf} % teste os valores
+	\caption[Legenda reduzida. Aparece apenas no sumário]{Legenda completa - não aparece no sumário. Aqui você pode colocar uma explicação melhor. Fonte: \textcite{boyle1772}.}
 	\label{fig:308}
 \end{figure}
 
-Agora vem uma citação. Com Herão de Alexandria, surgem os primeiros dispositivos automáticos:\footcite{herao}
+\lipsum[22]
 
-Eis uma citação bem simples:
-\begin{citacao}
-	(...) Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla
-	ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.(...)
-\end{citacao}
-
-\lipsum[30]
-
-\begin{figure}[htbp]
+% uma figura
+\begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{ichs2} % teste os valores
-	\caption[Legenda reduzida - aparece no sumário]{Legenda completa. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
+	\includegraphics[scale=0.4]{ichs2.jpg} % teste os valores
+	\caption[Legenda reduzida - aparece apenas no sumário]{Legenda completa - não aparece no sumário. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
 	\label{fig:309}
 \end{figure}
+
+
+
+\section{Uma seção extravagante}
 % ---
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-%\part{Resultados}
-% ----------------------------------------------------------
-% ---
+\lipsum[21]
+
+
 % primeiro capitulo de Resultados
-\chapter{Resultados}
+\chapter{Resultados} \label{cap:resultados}
 % ---
+
+Neste capítulo é apresentada uma análise dos resultados obtidos.
 
 \section{Dados, dados, dados}
 % ---
-\lipsum[21-22]
+\lipsum[21]
 
-% ----------------------------------------------------------
-% Finaliza a parte no bookmark do PDF
-% para que se inicie o bookmark na raiz
-% e adiciona espaço de parte no Sumário
 % ----------------------------------------------------------
 %\phantompart
-% ---
 % Insere arquivo de Considerações Finais ou Conclusões
-% ---
+\chapter{Considerações finais}
+As últimas palavras podem ser apresentadas neste capítulo. Ele pode ser numerado ou não. Caso queria que ele não possua numeração, utilize \* apos o comando chapter.
 
-\chapter{Considerações finais} %
-
-Um \emph{grand finale}. Esse capítulo pode ser numerado ou não.
+\lipsum[21]
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -698,7 +491,7 @@ Um \emph{grand finale}. Esse capítulo pode ser numerado ou não.
 %% Referências bibliográficas
 %% ----------------------------------------------------------
 % toca nome de bibliografia para ``Referências''
-\printbibliography[title=Referências]
+\printbibliography%[title=Referências]
 
 % ----------------------------------------------------------
 % Glossário
@@ -719,13 +512,14 @@ Um \emph{grand finale}. Esse capítulo pode ser numerado ou não.
 \begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
-\partapendices
+%\partapendices
 % ---
-% Insere arquivo com os apêndices A e B
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-\lipsum[50]
+% Insere arquivo com o apêndice A
+% --------
+
+\chapter{libero justo}
+Lembre-se: apêndices são de autoria do próprio autor do texto. Anexos são elementos de autorias de outros, que o autor do texto julga interessante apresentar
+
 
 \end{apendicesenv}
 % ---
@@ -741,14 +535,16 @@ Um \emph{grand finale}. Esse capítulo pode ser numerado ou não.
 \begin{anexosenv}
 
 % Imprime uma página indicando o início dos anexos
-\partanexos
+%\partanexos
 
 % ---
-% Insere arquivo com os anexos 1, 2 e 3
+% Insere arquivo com os anexos 1, 2
 \chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
-% ----------------------------------------------------------
+Lembre-se: apêndices são de autoria do próprio autor do texto. Anexos são elementos de autorias de outros, que o autor do texto julga interessante apresentar
+
+\chapter{Lorem Morbi ultrices rutrum.}
+Lembre-se: apêndices são de autoria do próprio autor do texto. Anexos são elementos de autorias de outros, que o autor do texto julga interessante apresentar
+
 % ---
 \end{anexosenv}
 
