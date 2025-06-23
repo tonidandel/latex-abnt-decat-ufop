@@ -28,7 +28,7 @@ Após isso basta abrir o editor de texto texstudio no seu menu de aplicativos e 
 
 ## Windows:
 
-Há uma distribuição completa disponibilizada pelo TUG (TeX and friends) chamada [ProTeXt](https://www.tug.org/protext/) para o **"Janelas"**, que instala o MikTeX (conjunto de pacotes básicos + o editor TeXStudio) . É um [arquivo grande](http://linorg.usp.br/CTAN/systems/windows/protext/protext-3.1.10-040819.zip) (cerca de 3.0GB), auto executável.
+Há uma distribuição completa disponibilizada pelo TUG (TeX and friends) chamada [TeXLive](https://www.tug.org/texlive/windows.html) para o **"windows"**, que instala o TeXLive (conjunto de pacotes básicos) + o editor [TeXstudio - A LaTeX editor](https://www.texstudio.org/#home) .
 
 ## MacOs:
 
