@@ -356,26 +356,13 @@ Um exemplo de citação em nota de de rodapé, com notas explicativas pode ser v
 
 Um outra outra forma de citação em nota explicativa pode ser elaborada\footnote{Escreva sua nota explicativa aqui, conforme \textcite{boyle1772}.}
 
-\section{Materiais e Métodos}
-Uma estrutura de tópicos é muito comum em metodologias. Uma forma de fazê-lo é utilizando o comando ``itemize'':
-
-\begin{itemize}
-	\item Tópico 1;
-	\item Tópico 2;
-	\item etc.
-\end{itemize}
-
-Se preferir itens numerados, utilizar o ambiente ``Enumerate'':
-	\begin{enumerate}
-	\item Tópico 1;
-	\item Tópico 2.
-\end{enumerate}
-
 \section{Objetivos}
+
 \subsection*{Geral}
 Escreva seu objetivo geral aqui. 
 \subsection*{Específicos}
-Se preferir explicitar objetivos específicos, entre com o texto aqui. Senão quiser, basta comentar a seção. Um exemplo de estrutura de itens: 
+Os objetivos secundários podem ser explicitados aqui. Se não quiser, basta comentar a seção, utilzando ``\%''. Um exemplo de estrutura de itens: 
+
 \begin{itemize}
 	\item item a;
 	\item item b;
@@ -387,6 +374,21 @@ Se preferir explicitar objetivos específicos, entre com o texto aqui. Senão qu
 %
 %\subsection*{Específicos}
 %Os objetivos secundários podem ser explicitados aqui.
+
+\section{Metodologia}
+Uma estrutura de tópicos é muito comum em metodologias. Uma forma de fazê-lo é utilizando o comando ``itemize'':
+
+\begin{itemize}
+	\item xxxxx;
+	\item yyyyyy;
+	\item etc.
+\end{itemize}
+
+Se preferir itens numerados, utilizar o ambiente ``Enumerate'':
+	\begin{enumerate}
+	\item uuuu;
+	\item vvvvv.
+\end{enumerate}
 %
 
 \section{Organização e estrutura}
@@ -398,9 +400,9 @@ A estrutura e organização deve apresentar os assuntos abordados ao longo do se
 % Capitulo de revisão de literatura
 \chapter{Revisão de literatura} \label{cap:revisao-de-literatura}
 
-\section{Exemplos de citações}
-
 Um capítulo de revisão de literatura, também chamado de revisão teórica ou bibliográfica pode ser desenvolvido aqui. Procure dissertar sobre os autores e trabalhos mais relevantes em seu campo de estudo, em um diálogo com sua proposta. Um exemplo de citação em linha pode ser visto como em \textcite{Einstein1920}. 
+
+\section{Exemplos de citações}
 
 Um exemplo de citação do tipo autor-data pode também ser elaborado \cite{Einstein1920}. 
 
@@ -408,11 +410,9 @@ Um exemplo de citação em nota explicativas pode ser visto aqui.\footnote{Esta 
 
 Um outra outra forma de citação em nota explicativa pode ser elaborada\footnote{Escreva sua nota explicativa aqui, conforme \cite{boyle1772}.}
 
-Se preferir citar apenas o título da obra, como, por exemplo \citetitle{lima2025}
+Se preferir citar apenas o título da obra, pode use o comando \textit{``citetitle''} como, por exemplo \citetitle{lima2025}
 
-Um exemplo de citação direta pode ser feito. Conforme aconselha \textcite{boyle1772-a}:
-
-
+Uma citação direta com mais de três linhas deve ser recuada e com fonte menor, como  o exemplo fictício proposto por \textcite{boyle1772-a}:
 
 \begin{citacao}
 	(...) Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.(...)
@@ -422,7 +422,15 @@ Segundo \cite{lima2025}, tem-se que...
 
 Se qjuiser utilizar notas explicativas, fazer assim ó\footnote{Este artigo é muito importante para a área. Ver em \textcite[p.4]{lima2025}.}
 
-Alternativavemte, segundo a expressão presente em \textcite[p.~3]{lima2025}, apresentada na equação \eqref{eq2p2}, vemos que:
+\section{Equações}
+
+Para redigir equações, você pode utilizar o ambiente \textit{``equation''}. Por exemplo, conforme ilustra a equação \eqref{eq1p1}
+
+\begin{equation}
+	f(x) = \int \limits_{0}^{+ \infty} \tanh \left[\ln (j \omega)^2 \right] dx \,. \label{eq1p1}
+\end{equation}
+ 
+Alternativavemte, segundo a expressão presente no mundo mágico proposto por \textcite[p.~3]{descartes-carta-mersene}, um \textit{array} de equações pode ser visto na equação \eqref{eq2p2}:
 
 \begin{eqnarray}
 	\lim_{\alpha / L \to 0} K  \left[-16 {{\frac{\alpha}{L}}^{2}}\right]  &=& K(0) \label{eq2p1} \nonumber \\ % salta linha
@@ -553,10 +561,23 @@ Agora, a mesma tabela em uma página separada, mas no formato paisagem:
 % ---
 \chapter{Desenvolvimento} \label{cap:desenvolvimento}
 
+\section{Uma seção extravagante}
+
 Caso seja um trabalho oriundo da Escola de Minas ou do ICEB, é conveniente apresentar uma fórmula:
+
 \begin{equation}
-f(x) = \int \limits_{0}^{+ \infty} \tanh \left[\ln (j \omega)^2 \right] dx \,. \label{eq:01}
+f(x) = \int \limits_{0}^{+ \infty} \tanh \left[\ln (j \omega)^2 \right] dx \,. 
+\label{eq:01}
 \end{equation}
+
+\noindent Esta equação foi gerada com o código:
+\begin{verbatim}
+	\begin{equation}
+		f(x) = \int \limits_{0}^{+ \infty} 
+		\tanh \left[\ln (j \omega)^2 \right] dx \,. 
+		\label{eq:01}
+	\end{equation}
+\end{verbatim}
 
 Lembre-se: equações fazem parte do texto e, por isso, devem ser pontuadas! Assim, conforme a equação \eqref{eq:02}, que está na página \pageref{eq:02}, tem-se uma demonstração. Um outro exemplo é :
 \begin{equation}
@@ -566,39 +587,44 @@ Lembre-se: equações fazem parte do texto e, por isso, devem ser pontuadas! Ass
 
 Pode-se também escrever equações na linha, como $E = m c^2\,,$ mas somente para expressões menores.
 
-Se for desenvolvido no ICHS (ver figura \ref{fig:309}), tem-se uma noção melhor do movimento estudantil. A figura \ref{fig:308} ilustra bem o fato.
 
-% uma figura
-\begin{figure}[h] % o ``h'' significa colocar a figura aqui (here)
-	\centering
-	\includegraphics[scale=0.3]{fig09.pdf} % teste os valores
-	\caption[Legenda reduzida. Aparece apenas no sumário]{Legenda completa - não aparece no sumário. Aqui você pode colocar uma explicação melhor. Fonte: \textcite{boyle1772}.}
-	\label{fig:308}
+\section*{Um estudo sobre as figuras} % exemplo de ambiente sem numeração
+
+A atual seção é um exemplo de ambiente sem numeração, que se pode conseguir com sufixo ``\*''
+
+Uma figura não mostra nada, ela ilustra. Isto pode ser verificado na figura \ref{fig:308}. Esta figura foi gerada com o ambiente \textit{figure}
+\begin{verbatim}
+	\begin{figure}[h] % Outras opções: b,t,p,ht,hb..
+			\centering
+			\includegraphics[width=0.7\textwidth]{fig09.pdf}
+			\caption[Escritório de telégrafos.]{Escritório de telegrafia
+			do século XIX. Fonte: \textcite{thomson_1869}. 
+			Esta é uma legenda completa - não aparece no sumário. 
+			Fonte: \textcite{boyle1772}.}
+			\label{fig:308}
+	\end{figure}
+\end{verbatim}
+
+Busque testar o posicionamento delas na folha por meio dos parâmetros b (bottom),t (top),p (page) ou alguma combinação entre eles, em \textbf{negrito}, \textbf{itálico}, \textsf{serifado (inclinado)}, ou outro estilo.
+
+\begin{figure}[h] % Outras opções: b (bottom),t (top),p (page) ou alguma combinação entre elas
+\centering
+\includegraphics[width=0.7\textwidth]{fig09.pdf}
+\caption[Escritório de telégrafos. Esta aparece apenas no sumário]{Escritório de telegrafia do século XIX. Fonte: \textcite{thomson_1869}. Esta é uma legenda completa - não aparece no sumário. Fonte: \textcite{boyle1772}.}
+\label{fig:308}
 \end{figure}
 
-\lipsum[22]
+
+
+Se o seu trabalho for desenvolvido no ICHS (ver figura \ref{fig:309}), atualmente na página \pageref{fig:309}, tem-se uma noção melhor do movimento estudantil.
 
 % uma figura
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{ichs2.jpg} % teste os valores
+	\includegraphics[width=0.7\textwidth]{ichs2.jpg} % teste os valores
 	\caption[Legenda reduzida - aparece apenas no sumário]{Legenda completa - não aparece no sumário. Aqui você pode colocar uma explicação melhor, sem que ela apareça no sumário do seu trabalho. Fonte: \cite[p.~117]{boyle1772}.}
 	\label{fig:309}
 \end{figure}
-
-\section*{Um estudo sobre as figuras} % exemplo de ambiente sem numeração
-
-\begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{fig09.pdf}
-\caption[Escritório de telégrafos]{Escritório de telegrafia do século XIX. Fonte: \textcite{thomson_1869}.}
-\end{figure}
-
-
-\section{Uma seção extravagante}
-% ---
-\lipsum[21]
-
 
 % primeiro capitulo de Resultados
 \chapter{Resultados} \label{cap:resultados}
