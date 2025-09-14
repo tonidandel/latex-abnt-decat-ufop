@@ -6,24 +6,23 @@ O modelo não segue uma aplicação exaustiva das normas, mas algumas de suas po
 
 ## Instalação e utilização
 
-A última versão está disponível no link [no link](https://github.com/tonidandel/latex-abnt-decat-ufop/releases/tag/v25.09-tcc-latex-decat-ufop)
+A última versão (release v25.09) pode ser acessada na aba releases, ou [aqui](https://github.com/tonidandel/latex-abnt-decat-ufop/releases/tag/v25.09-tcc-latex-decat-ufop).
 
 Se tiver alguma dúvida em como usar o modelo, acessar [uma pequena oficina LaTeX.](https://tonidandel.github.io//oficina-latex/).
 
 ### **GNU/Linux**:
 
-basta utilizar o gerenciador de aplicativos da sua distribuição Linux favorita e instalar os pacotes `texlive-fulll`, que reune todos os requisitos necessários para a utilização do \LaTeX. O texlive é a base sob a qual o sistema funciona. Como editor de texto, a sugestão é o `texstudio`:
+Basta utilizar o gerenciador de aplicativos da sua distribuição Linux favorita e instalar o pacote `texlive-fulll`,  que é a base sob a qual o sistema funciona e que reune todos os requisitos necessários para a utilização do \LaTeX. Além disso, é necessário o editor, propriamente dito. Uma sugestão é o aplicativo [TexStudio](https://www.texstudio.org/#download).
 
-Se prerefir utilizar a linha de comandos, entre com os comandos abaixo (o sistema irá pedir sua senha de supeprusuário depois do primeiro comando):
+Se prerefir utilizar um terminal, entre com os comandos abaixo (o sistema irá pedir sua senha de super-usuário depois do primeiro comando):
 
 ```
-$ sudo su
-# apt update && apt install texlive-full && apt install texstudio
+$ sudo apt update && apt install texlive-full && apt install texstudio -s
 ```
 
-Após isso basta abrir o editor de texto texstudio no seu menu de aplicativos e começar a utilizar o programa:
+Após isso basta abrir o editor de texto texstudio no seu menu de aplicativos e começar a utilizar o programa.
 
-**É altamente recomendável** utilizar um sistema operacional GNU/Linux para rodar o $\LaTeX$. Quem tiver interesse, assistir o [tutorial de instalação](https://www.youtube.com/watch?v=WgJksOkfnTQ) de uma distribuição leve e intuitiva, o Linux Mint.
+**É altamente recomendável** utilizar alguma distribuição do sistema operacional GNU/Linux para rodar o template. Quem tiver interesse, assistir o vídeo: [Como instalar o Linux Mint? - Guia passo a passo para iniciantes no Linux - YouTube](https://www.youtube.com/watch?v=C4RKbNlrW4I&pp=ygUaZGlvbGludXggaW5zdGFsYcOnw6NvIG1pbnQ%3D)).
 
 ### **Windows**:
 
@@ -33,6 +32,8 @@ Há uma distribuição completa disponibilizada pelo TUG (TeX and friends) chama
 
 Há uma distribuição do TexLive para o MacOS, também disponibilizada pelo TUG chamada [MacTeX](https://tug.org/mactex/). Na página é possível encontrar instruções de instalação e download dos programas.
 
-### **Aplicativo web**:
+### **Web**:
 
-Uma evolução da computação foi certamente a possibilidade de execução de aplicatitvos em nuvem. Há um sistema completo de desenvolvimento em $\LaTeX$ que pode ser executado totalmente online, chamado **[OverLeaf](https://www.overleaf.com/)**.  **Mas atenção: embora gratuito, o Overleaf possibilita um número limitado para criação de projetos em \LaTeX. Após algumas compilações, a plataforma começará a apresentar "erros" (que, na verdade, representa uma obsolescência programada!)** 
+Uma evolução da computação foi certamente a possibilidade de execução de aplicatitvos em nuvem. Há um sistema completo de desenvolvimento em $\LaTeX$ que pode ser executado totalmente online, chamado **[OverLeaf](https://www.overleaf.com/)**.  
+
+**Mas atenção: embora gratuito, o Overleaf possibilita um número limitado para criação de projetos em \LaTeX. Após algumas compilações, a plataforma começará a apresentar "erros" (o que, na verdade, representam uma obsolescência programada!)** 
