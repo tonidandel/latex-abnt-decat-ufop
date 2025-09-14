@@ -1,4 +1,4 @@
-# Template LaTeX para TCCs DECAT/UFOP
+# Template ABNT LaTeX para TCCs  -- DECAT-UFOP
 
 Modelo para Trabalho Final de Curso (TCC) - Departamento de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto (DECAT-UFOP).
 
