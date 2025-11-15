@@ -22,11 +22,19 @@ $ sudo apt update && apt install texlive-full && apt install texstudio -s
 
 Após isso basta abrir o editor de texto texstudio no seu menu de aplicativos e começar a utilizar o programa.
 
-**É altamente recomendável** utilizar alguma distribuição do sistema operacional GNU/Linux para rodar o template. Quem tiver interesse, assistir o vídeo: [Como instalar o Linux Mint? - Guia passo a passo para iniciantes no Linux - YouTube](https://www.youtube.com/watch?v=C4RKbNlrW4I&pp=ygUaZGlvbGludXggaW5zdGFsYcOnw6NvIG1pbnQ%3D)).
+**Observações:** 
+
+- É recomendável utilizar alguma distribuição do sistema operacional GNU/Linux para rodar o template. 
+
+- Para configurar o editor, utilizar o compiladores LuaLaTeX (para o arquivos fonte ".tex") e Biber (compilação de referências).
 
 ### **Windows**:
 
 Há uma distribuição completa disponibilizada pelo TUG (TeX and friends) chamada [TeXLive](https://www.tug.org/texlive/windows.html) para o **"windows"**, que instala o TeXLive (conjunto de pacotes básicos) + o editor [TeXstudio - A LaTeX editor](https://www.texstudio.org/#home) .
+
+**Observações:**
+
+- Para configurar o editor, utilizar o compiladores LuaLaTeX (para o arquivos fonte ".tex") e Biber (compilação de referências).
 
 ### **MacOs**:
 
