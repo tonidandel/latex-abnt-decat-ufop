@@ -6,7 +6,7 @@ O modelo não segue uma aplicação exaustiva das normas, mas algumas de suas po
 
 ## Instalação e utilização
 
-A última versão (release v25.09) pode ser acessada na aba releases, ou [aqui](https://github.com/tonidandel/latex-abnt-decat-ufop/releases/tag/v25.09-tcc-latex-decat-ufop).
+A última versão (release v26.02) pode ser acessada na aba releases, ou [aqui](https://github.com/tonidandel/latex-abnt-decat-ufop/releases/tag/v26.02-tcc-latex-decat-ufop).
 
 Se tiver alguma dúvida em como usar o modelo, acessar [uma pequena oficina LaTeX.](https://tonidandel.github.io//oficina-latex/).
 
