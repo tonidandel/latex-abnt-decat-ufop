@@ -1,8 +1,3 @@
-% Magic comments - Informa ao compilador algumas regras de execução, como tipo de compilação ou codificação do texto
-
-%% abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
-%% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/
-%%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3 of this license or (at your option) any later version.
 %%
@@ -10,7 +5,10 @@
 %%
 %% INÍCIO DAS CUSTOMIZAÇÕES PARA A UNIVERSIDADE FEDERAL DE OURO PRETO
 
-%% 28.09.2026 19h56 Danny Tonidandel
+%% 10.09.2026 19h56 Danny Tonidandel
+%% 	-	ALtera padrão para de cores oficiais da UFOP
+
+%% 04.09.2026 19h56 Danny Tonidandel
 %% Atualização normas pelo Comitê Brasileiro de Informação e Documentação da ABNT:
 %% 	-	ALtera elementos de capa e folha de rosto 
 %% 	-	Altera rótulos de gênero para orientador ou orientadora
@@ -51,18 +49,14 @@
 
 %% FIM DAS CUSTOMIZAÇÕES PARA A UNIVERSIDADE FEDERAL DE OURO PRETO
 
-%% This work consists of the files
+%% Esse trabalho consiste nos arquivos
 % template-abnt-ufop-escola-de-minas.tex
 % referencias.bib
-%%
-% --------------------------------------------
-% ----------------------------------------------
-% abnTeX2: Modelo de trabalho Academico (tese de doutorado, dissertacao de
 
-% mestrado e trabalhos monograficos em geral) em conformidade com
-% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
-% Apresentacao
-% ------------------------------------------------------------------------
+% --------------------------------------------
+% abnTeX2: Modelo de trabalho Academico (tese de doutorado, dissertacao de 
+% mestrado e trabalhos monográficos em geral) em conformidade com as normas
+% ABNT
 % ------------------------------------------------------------------------
 
 \documentclass[
@@ -81,18 +75,14 @@
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
 
-% ---
-% Pacotes básicos
-% ---
-
+% --- Pacotes básicos
 \usepackage{graphicx} 	% gráficos
-\usepackage[table,xcdraw]{xcolor}	% tabelas
+\usepackage{lscape} % figuras em paisagem
+\usepackage[table,xcdraw]{xcolor} % tabelas
 \graphicspath{{figuras/}} % pasta para figuras
-\DeclareGraphicsExtensions{.pdf,.eps,.svg,.png,.jpg,.bmp}
-\usepackage{caption}
+\DeclareGraphicsExtensions{.pdf,.eps,.svg,.png,.jpg,.bmp} % extensões
+\usepackage{caption} % para configrações em legendas
 
-% figuras em paisagem
-\usepackage{lscape}
 
 \usepackage{indentfirst} % para identação no primeiro parágrafo
 \usepackage{booktabs}
@@ -111,24 +101,38 @@
 
 % Citações
 \usepackage[backend=biber,
-% % configuracoes do estilo abnt
+% configuracoes do estilo abnt
  style=abnt,
- %sccite, % sobrenomes em caixa alta
- %ittitles, % Titulos em italico
  citecount, % contar o número de citações
- %scbib, % biliografia em caixa alta
  justify, % alinhamento justificado
  noslsn,
- %repeatfields,
- %sorting=nty, % ordem alfabetica
  ]{biblatex}
 
-% ARQUIVO COM AS REFERÊNCIAS BIBLIOGRAFICAS
+% Arquivo de referências
 \addbibresource{referencias.bib}
 
+
+
+% Aparência do PDF - Cores oficiais da UFOP {https://www.ufop.br/logomarca/}
+
+\definecolor{VinhoUFOP}{cmyk}{0.00, 1.00, 0.64, 0.33} 
+\definecolor{CinzaUFOP}{cmyk}{0.67, 0.00, 0.00, 0.64} 
+
+% Configuração dos links do PDF
+\hypersetup{
+	colorlinks=true,       % remove as caixas
+	linkcolor=VinhoUFOP,   % links internos
+	citecolor=CinzaUFOP,   % citações bibliográficas
+	urlcolor=VinhoUFOP,    % urls
+	filecolor=CinzaUFOP,    % links para arquivos
+	pdftitle={\@title},
+	pdfauthor={\@author},
+	pdfsubject={\imprimirpreambulo},
+	pdfcreator={UFOP com LaTeX}
+}
+
 % ---
-% Personalização do estilo biblatex-abnt
-%Danny A. V. Tonidandel
+% Personalização do estilo biblatex-abnt - Danny A. V. Tonidandel
 
 % Adequa as urls de acordo com normas 6023:2018
 \DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\addspace \url{#1}}%
@@ -145,11 +149,11 @@
 % Configura o mdframed para inserir uma caixa cinza de nome ``caixa{}''
 \newcommand{\caixa}[1]{%
 	\begin{mdframed}[
-		linewidth=1.0pt,
+		linewidth=1.5pt,
 		leftmargin=10pt,%
 		rightmargin=10pt,%
-		linecolor=black,
-		backgroundcolor=gray!20
+		%backgroundcolor=gray!50
+		linecolor=VinhoUFOP
 	]{\small #1}
 	\end{mdframed}
 }
@@ -168,19 +172,22 @@
 
 \lstset{
 	language=CustomLaTeX,
-	backgroundcolor=\color{gray!5},
+	backgroundcolor=\color{white},
 	basicstyle=\ttfamily\footnotesize, % Fonte menor que no texto
-	keywordstyle=\color{blue}\bfseries,
-	commentstyle=\color{gray},
-	stringstyle=\color{orange},
+	keywordstyle=\color{VinhoUFOP}\bfseries,
+	commentstyle=\color{CinzaUFOP}\itshape,
+	stringstyle=\color{VinhoUFOP},
 	emph={figure, citacao, equation, eqnarray, frac, to, left, right, theta, int, pi, alpha, limits, infty, tanh, omega, ln, h, nonumber, lim}, 
-	emphstyle=\color{olive},
+	emphstyle=\color{CinzaUFOP},
 	breaklines=true,
 	frame=single,
 	numbers=left,
-	numberstyle=\tiny\color{gray},
+	numberstyle=\tiny\color{CinzaUFOP},
 	captionpos=t,       % sempre no topo
 	showstringspaces=false,
+	rulecolor=\color{VinhoUFOP},
+	framerule=0.7pt,
+	xrightmargin=10pt,
 	xleftmargin=10pt
 }
 
@@ -188,126 +195,102 @@
 \renewcommand{\lstlistingname}{C{\'o}digo}
 
 
-% ---
-% Informações de dados para CAPA e FOLHA DE ROSTO
-% ---
-\titulo{Um Estudo sobre a Dinâmica de Sistemas Complexos \\ {\normalsize \textcolor{red}{Modelo ABNT e Tutorial para TCCs - DECAT-UFOP}} \\ {\small \textcolor{blue}{v26.08}}}
+% DADOS PARA CAPA E FOLHA DE ROSTO
+
+% Título e subtítulo
+\titulo{
+	Um Estudo sobre a Dinâmica de Sistemas Complexos \\ 
+	{\normalsize Modelo ABNT e Tutorial para TCCs - DECAT-UFOP} \\ {\small \textcolor{VinhoUFOP}{v26.08}}
+	}
+
+% Autoria
 \autor{Maria da Cunha}
-\local{Ouro Preto}
 
-% imprime o ano corrente no campo data
-\data{\the\year} 
-
-% Altera o rótulo do orientador
+% Orientação
 \orientador[Orientadora:]{Profa. Dra. Chiquinha Gonzaga}
-
-% Define rótulo para co-orientador
 \coorientador{Prof. Dr. Albert Einstein}
 
+%Local e Data
+\local{Ouro Preto}
+\data{\the\year} 
+
+% Instituição
 \instituicao{Universidade Federal de Ouro Preto}
 \tipotrabalho{Monografia de Graduação}
-\preambulo{Trabalho apresentado ao Colegiado do Curso de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto como parte dos requisitos para a obtenção do Grau de Engenheiro(a) de Controle e Automação.}
-% ---
 
-% ---
-% Aparência do PDF final
+% Preambulo
+\preambulo{
+	Trabalho apresentado ao Colegiado do Curso de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto como parte dos requisitos para a obtenção do Grau de Engenheiro(a) de Controle e Automação.
+	}
 
-% alterando o aspecto da cor azul
-\definecolor{blue}{RGB}{41,5,195}
-
-% informações do PDF
-\makeatletter
-\hypersetup{
-     	%pagebackref=true,
-		pdftitle={\@title},
-		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={ufop}{latex}{decat}{monografia},
-		colorlinks=true,   % opções: false, true
-    	%linkcolor=blue,    % cor de links internos
-    	%citecolor=blue,    % cor de links na bibliografia
-        %urlcolor=blue,     % cor de hiperlinks (urls)
-    	linkcolor=darkgray,    % cor de links internos
-    	citecolor=darkgray,    % cor de links na bibliografia
-    	filecolor=magenta, % color de links para arquivos
-		urlcolor=darkgray,     % cor de hiperlinks (urls)
-}
 \makeatother
 % ---
 
-% ---
 % Espaçamentos entre linhas e parágrafos
-% ---
-
 \setlength{\parindent}{1.3cm} % Tamanho do parágrafo
 \setlength{\parskip}{0.2cm} % Espaçamento entre parágrafos
 \makeindex % compila o indice
+
 \usepackage{fancyhdr} % cabecalho ``chique''
 
 % Ambientes de Teoremas e definições
 \newtheorem{algoritmo}{Algoritmo}
 \newtheorem{definicao}{Definição}
 \newtheorem{exemplo}{Exemplo}
-\newtheorem{exercicio}{Exercício}
-\newtheorem{propriedade}{Propriedade}
-\newtheorem{lema}{Lema}
 \newtheorem{solucao}{Solução}
 \newtheorem{teorema}{Teorema}
 \newtheorem{demonstracao}{Demonstração}
-\newtheorem{especificacao}{Especificação}
 
-\begin{document} % Início do documento
+% Início do documento
+\begin{document} 
 
 \frenchspacing % Retira espaço obsoleto
 
-% Pré-TextualEXTUAIS
-
-% Capa - obrigatório
+% Capa
 \begin{capa}
-	\newgeometry{margin=2.5cm}
-	\thispagestyle{empty}
-	\centering
-		\begin{minipage}{\textwidth}
-				\begin{tabular}{ccc}
-					\begin{tabular}{c}
-						\\
-						{\includegraphics[width=1.2cm]{logo-universidade.jpg} }
+		\newgeometry{margin=2.5cm}
+		\thispagestyle{empty}
+		\centering
+			\begin{minipage}{\textwidth}
+					\begin{tabular}{ccc}
+						\begin{tabular}{c}
+							\\
+							{\includegraphics[width=1.2cm]{logo-universidade.jpg} }
+						\end{tabular}
+						&
+						\begin{tabular}{c}
+							\\
+							{\Large \,\,\,\,\, \imprimirinstituicao \,\,\,\,\,} \\
+							{\large Escola de Minas} \\
+							{\large Engenharia de Controle e Automação}
+						\end{tabular}
+						&
+						\begin{tabular}{r}
+							\\
+							{\raggedright \includegraphics[width=2.8cm]{logo-unidade-2.jpg}}
+						\end{tabular}
 					\end{tabular}
-					&
-					\begin{tabular}{c}
-						\\
-						{\Large \,\,\,\,\, \imprimirinstituicao \,\,\,\,\,} \\
-						{\Large Escola de Minas} \\
-						{\Large Engenharia de Controle e Automação}
-					\end{tabular}
-					&
-					\begin{tabular}{r}
-						\\
-						{\raggedright \includegraphics[width=2.8cm]{logo-unidade-2.jpg}}
-					\end{tabular}
-				\end{tabular}
-		\end{minipage}
-			
-\centering
-\vspace*{1.6cm}
-
-{\ABNTEXchapterfont \Large \imprimirautor}
-\vspace*{\fill}
-
-{\ABNTEXchapterfont\bfseries \Large \imprimirtitulo}
-
-\vspace*{\fill}
-\vspace*{\fill}
-{\Large\imprimirlocal} \\ 
-{\large \the\year}
-%{\large\imprimirlocal}, {\large \the\year}
-%\par
-\vspace*{1cm}
-%
-\clearpage % Finaliza a página atual
-% Restaura as margens padrão do documento
-\restoregeometry
+			\end{minipage}
+				
+		\centering
+		\vspace*{1.6cm}
+		
+		{\ABNTEXchapterfont \Large \imprimirautor}
+		\vspace*{\fill}
+		
+		{\ABNTEXchapterfont\bfseries \Large \imprimirtitulo}
+		
+		\vspace*{\fill}
+		\vspace*{\fill}
+		{\Large\imprimirlocal} \\ 
+		{\large \the\year}
+		%{\large\imprimirlocal}, {\large \the\year}
+		%\par
+		\vspace*{1cm}
+		%
+		\clearpage % Finaliza a página atual
+		% Restaura as margens padrão do documento
+		\restoregeometry
 \end{capa}
 
 % Folha de rosto [OBRIGATÓRIO]
@@ -340,18 +323,10 @@
 	\end{center}
 \end{folhaderosto}
 
-% \imprimirfolhaderosto* se quiser ficha catalográfica
-% Ficha bibliográfica [OPCIONAL,segundo determinação CECAU  e DECAT, 29/03/2023]
-% \begin{fichacatalografica}
-%     \includepdf{fig_ficha_catalografica.pdf}
-% \end{fichacatalografica}
-
-
-% Folha de aprovação - [OBRIGATÓRIO pela NBR 14724/2011]
+% Folha de aprovação - [OBRIGATÓRIO]
 \begin{folhadeaprovacao}
 \includepdf{folha-de-aprovacao.pdf}
 \end{folhadeaprovacao}
-
 
 % Agradecimentos [OPCIONAL]
 \begin{agradecimentos}
@@ -364,33 +339,31 @@
 {\textsl{Sua epígrafe aqui.}}\\{---~Autor da epígrafe.}
 \end{epigrafe}
 
-
 % Resumo em português [OBRIGATÓRIO]
-\setlength{\absparsep}{18pt} % ajusta espaçamento
-\begin{resumo}
- \noindent O resumo deve ressaltar o objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do tratamento que cada item recebe no documento original. O resumo deve ser precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
-
- \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
-\end{resumo}
+	\setlength{\absparsep}{18pt} % ajusta espaçamento
+	\begin{resumo}
+	 \noindent O resumo deve ressaltar o objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
+	 destes itens dependem do tipo de resumo (informativo ou indicativo) e do tratamento que cada item recebe no documento original. O resumo deve ser precedido da referência do documento, com exceção do resumo inserido no
+	 próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
+	 ponto e finalizadas também por ponto.
+	
+	 \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
+	\end{resumo}
 
 % resumo em inglês ou outra língua [OBRIGATÓRIO LINGUA ESTRANGEIRA]
 \begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-
-\noindent This is the english abstract.
-
-   \vspace{\onelineskip}
-
-   \noindent
-   \textbf{Key-words}: latex. abntex. text editoration.
- \end{otherlanguage*}
+	 \begin{otherlanguage*}{english}
+	
+	\noindent This is the english abstract.
+	
+	   \vspace{\onelineskip}
+	
+	   \noindent
+	   \textbf{Key-words}: latex. abntex. text editoration.
+	 \end{otherlanguage*}
 \end{resumo}
 
-
-% Lista de ilustrações [OPCIONAL]
+% Lista de figuras [OPCIONAL]
 \renewcommand{\listfigurename}{Lista de figuras} % altera nome
 \pdfbookmark[0]{\listfigurename}{lof}
 \listoffigures*
@@ -400,29 +373,23 @@
 \pdfbookmark[0]{\listtablename}{lot}
 \listoftables*
 \cleardoublepage
-% ---
 
-% ---
-%% Lista de abreviaturas e siglas [OPCIONAL]
+% Lista de abreviaturas e siglas [OPCIONAL]
 \begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
+  \item[UFOP] Universidade Federal de Ouro Preto
+  \item[Automic Jr] Empresa Júnior do Curso de Engenharia de Controle e Automação
+  \item[CAT490] Disciplina trabalho Final de Curso I
 \end{siglas}
-% ---
 
-%---
 % Lista de símbolos [OPCIONAL]
-%---
 \begin{simbolos}
   \item[$ \Gamma $] Letra grega Gama
   \item[$ \Lambda $] Lambda
   \item[$ \zeta $] Letra grega minúscula zeta
   \item[$ \in $] Pertence
 \end{simbolos}
-% ---
 
-% ---
-% Sumário
+% Sumário [OBROGATÓRIO]
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
@@ -433,13 +400,10 @@
 \@addtoreset{footnote}{chapter}
 \makeatother
 
-
-
-
 % Parte textual
 \textual
 
-%%% remove decoração cabecalhos
+%% remove decoração cabecalhos
 \fancypagestyle{plain}{%
 	\fancyhf{} % limpa tudo
 	\fancyhead[R]{\thepage} % número no topo à direita
@@ -458,7 +422,7 @@
 	
 	No capítulo introdutório da monografia -- que não precisa se chamar obrigatoriamente de ``Introdução'' -- deve-se apresentar, de maneira clara e precisa, a importância e a delimitação do assunto, além de outros elementos importantes para a apresentação do tema. Além disso, ele deve conter os objetivos da pesquisa, justificativas e relevância do trabalho. Deve-se também prestar atenção à \textbf{pessoa do discurso}. Isto é, para monografias de caráter majoritariamente informativo e técnico, como é comum em engenharias, recomenda-se o uso da \textbf{terceira pessoa do singular}. Em estudos de caso ou pesquisas qualitativas, a primeira pessoa do singular pode ser aceitável.
 
-\section{Justificativas e Relevância}
+\section{Justificativas e relevância}
 	A seção de justificativas e relevância deve apresentar argumentos que justifiquem o trabalho em si, buscando evidenciar sua importância dentro da área de trabalho escolhida e como ela contribuirá para a solução do problema proposto, como ressaltam \textcite{fuchs2025guia}. Para um trabalho de natureza prática, comum em engenharias, deve-se também ressaltar os benefícios que podem advir a partir da realização da pesquisa. 
 	
 	No caso deste tutorial, tanto o documento quanto seu código-fonte são exemplos de referência da uso da classe \textsf{\abnTeX} e do pacote \textsf{biblatex}. Vale ressaltar que, recentemente, uma atualização das normas pelo Comitê Brasileiro de Informação e Documentação da ABNT de 2015 a 2025 foi realizada, no contexto das normas:
@@ -494,20 +458,21 @@
 \subsection{Citações Diretas e Indiretas}
 	Segundo \textcite{fuchs2025guia} citação é a forma de mencionar alguma informação retirada de outra fonte, para ilustrar ou reforçar o que se afirma. O que está sendo feito na frase anterior é um tipo de \textbf{citação indireta}, em que se reproduz a informação retirada dos autores citados, sem, no entanto, fazer uma transcrição direta do conteúdo apresentado por eles. E a norma que rege as citações no texto é a NBR 10520. Caso se quisesse apresentar exatamente a palavra dos autores, seria necessário fazer uma \textbf{citação direta}. E há duas formas de fazê-lo:
 
-	\begin{itemize}
+\begin{itemize}
 		\item[a)] Texto curtos: basta realizar a citação do texto, entre entre aspas, referenciando o autor do trabalho. Vale ressaltar que, no \LaTeX, as aspas serão corretamente geradas da forma: \verb*|``texto''|;
 		\item[b)] Citações mais longas, com mais de duas linhas: usar o ambiente \verb|citacao|, com	o texto sem aspas. Por exemplo, o código:
 			
-		\begin{lstlisting}
-			\begin{citacao}	
-				...~meu objetivo aqui é dizer que a Máquina Celeste não é como um ser divino ou animado, mas como um relógio -- e esse relógio, que se acredita ser animado, retrata a glória do Artesão. \cite{KeplerDyckCaspar1951}
+\begin{lstlisting}
+\begin{citacao}	
+	...~meu objetivo aqui é dizer que a Máquina Celeste não é como um ser divino ou animado, mas como um relógio -- e esse relógio, que se acredita ser animado, retrata a glória do Artesão. \cite{KeplerDyckCaspar1951}
 			\end{citacao}	
-		\end{lstlisting}
-			\noindent Terá, como resultado:
-		\begin{citacao}	
-			...~meu objetivo aqui é dizer que a Máquina Celeste não é como um ser divino ou animado, mas como um relógio -- e esse relógio, que se acredita ser animado, retrata a glória do Artesão. \cite{KeplerDyckCaspar1951}
-		\end{citacao}
-	\end{itemize}
+\end{lstlisting}
+\noindent Terá, como resultado:
+
+\begin{citacao}	
+		...~meu objetivo aqui é dizer que a Máquina Celeste não é como um ser divino ou animado, mas como um relógio -- e esse relógio, que se acredita ser animado, retrata a glória do Artesão. \cite{KeplerDyckCaspar1951}
+\end{citacao}
+\end{itemize}
 	
 \subsection{Sistemas de chamada}
 	Em geral, o sistema de chamada deve ser adequado ao modo de escrita. Por exemplo, é recomendada a utilização do formato \verb*|Autor(data)| ao dialogar com autores, ou o formato \verb*|(Autor,data)| ao final de sentenças para embasamento conceitual, evitando vícios de escrita. A norma também prevê o sistema numérico e as notas explicativas em rodapé. \textbf{Deve-se escolher um sistema e buscar manter a coerência ao longo do texto}.
@@ -534,13 +499,13 @@
 		\item[c)] Notas explicativas e/ou de referência. Se preferir utilizar notas explicativas, deve-se usar um dos sistemas de chamada em  notas de rodapé, com o \verb*|\footnote{texto}|, por exemplo, 
 
 
-		\begin{lstlisting}[label=cod:001]
-			\footnote{Um exemplo de citação em notas explicativas pode ser visto aqui. Ver em \textcite[p.4]{lima2025}.}
-		\end{lstlisting}
+\begin{lstlisting}[label=cod:001]
+	\footnote{Um exemplo de citação em notas explicativas pode ser visto aqui. Ver em \textcite[p.4]{lima2025}.}
+\end{lstlisting}
 			
-		\noindent Este comando irá gerar um número sobrescrito\footnote{Um exemplo de citação em nota explicativas pode ser visto aqui. Ver em \textcite[p.4]{lima2025}.} e sua consequente nota explicativa no rodapé.
+\noindent Este comando irá gerar um número sobrescrito\footnote{Um exemplo de citação em nota explicativas pode ser visto aqui. Ver em \textcite[p.4]{lima2025}.} e sua consequente nota explicativa no rodapé.
 		
-	\end{itemize}
+\end{itemize}
 
 \subsection{Referências cruzadas}
 	Uma referência cruzada é uma ligação que aponta para outra parte do mesmo texto, como figuras, tabelas, títulos, equações, notas etc. Ela servem para conectar partes de um documento, atualizar números de forma automática e ajudar na leitura. Para realizar uma referência cruzada, isto é, citar algum a elemento (página, figura, tabela, equação, nota etc), basta usar os comandos \verb*|\pageref{label-do-elemento}.| 
@@ -554,47 +519,47 @@
 		f(x) = \int \limits _{0}^{+ \infty} \tanh \left[\ln (j \omega)^2 \right] dx \,, \label{eq1p1}
 	\end{equation}
 	\noindent pode ser gerada com o código:
-	\begin{lstlisting}[caption={Código da equação \ref{eq1p1}.}, label={cod:eq2p2}]
-	\begin{equation}
-		f(x)=\int \limits_{0}^{+\infty} \tanh \left[\ln (j\omega)^2 \right] dx\.
-		\label{eq1p1}
-	\end{equation}
-	\end{lstlisting}
+\begin{lstlisting}[caption={Código da equação \ref{eq1p1}.}, label={cod:eq2p2}]
+\begin{equation}
+	f(x)=\int \limits_{0}^{+\infty} \tanh \left[\ln (j\omega)^2 \right] dx\.
+	\label{eq1p1}
+\end{equation}
+\end{lstlisting}
 			
-	Caso se deseje criar uma lista de equações alinhadas:
-		\begin{eqnarray}
-			\lim _{\frac{\alpha}{L} \to0} K  \left[-16 {{\frac{\alpha}{L}}^{2}}\right]  &=& K(0) \label{eq2p1} \nonumber \\ % salta linha
-			&=& \int_{0}^{\pi / 2} 1 d\theta \nonumber \\
-			&=& \frac{\pi}{2} \,,
-			\label{eq2p2}
-		\end{eqnarray}
-	\noindent Você pode conseguir este efeito com o ambiente \verb*|eqnarray|, utilizando o caractere $\&$ para controlar o alinhamento. O código para gerar a equação \eqref{eq2p2} pode ser visto em sequência:
-	%	
-	\begin{lstlisting}[caption={Código da equação \ref{eq2p2}.}, label={cod:eq2p2a}]
+Caso se deseje criar uma lista de equações alinhadas:
 	\begin{eqnarray}
-		\lim _{\frac{\alpha}{L} \to 0} K  \left[-16 {{\frac{\alpha}{L}}^{2}}\right] &=& K(0) \label{eq2p1} \nonumber \\ % salta linha
-		&=& \int_{0}^{\pi / 2} 1 d\theta \\
-		&=& \frac{\pi}{2} \,.
-		\label{eq2p2a}
-	\end{eqnarray}	
-	\end{lstlisting}	
+		\lim _{\frac{\alpha}{L} \to0} K  \left[-16 {{\frac{\alpha}{L}}^{2}}\right]  &=& K(0) \label{eq2p1} \nonumber \\ % salta linha
+		&=& \int_{0}^{\pi / 2} 1 d\theta \nonumber \\
+		&=& \frac{\pi}{2} \,,
+		\label{eq2p2}
+	\end{eqnarray}
+\noindent Você pode conseguir este efeito com o ambiente \verb*|eqnarray|, utilizando o caractere $\&$ para controlar o alinhamento. O código para gerar a equação \eqref{eq2p2} pode ser visto em sequência:
+	%	
+\begin{lstlisting}[caption={Código da equação \ref{eq2p2}.}, label={cod:eq2p2a}]
+\begin{eqnarray}
+	\lim _{\frac{\alpha}{L} \to 0} K  \left[-16 {{\frac{\alpha}{L}}^{2}}\right] &=& K(0) \label{eq2p1} \nonumber \\ % salta linha
+	&=& \int_{0}^{\pi / 2} 1 d\theta \\
+	&=& \frac{\pi}{2} \,.
+	\label{eq2p2a}
+\end{eqnarray}	
+\end{lstlisting}	
 		
-	\noindent Mais um exemplo:
+\noindent Mais um exemplo:
 		\begin{equation}
 			f(x) = \int \limits _{0}^{+ \infty} \tanh \left[\ln (j \omega)^2 \right] dx \,.
 			\label{eq:01}
 		\end{equation}	
 	\noindent Esta equação foi gerada com o código:	
 	%
-	\begin{lstlisting}[caption={Código da equação \ref{eq:01}.}, label={cod:eq:01}]
-	\begin{equation}
-		f(x) = \int \limits _{0}^{+ \infty} 
-		\tanh \left[\ln (j \omega)^2 \right] dx \,.
-		\label{eq:01}
-	\end{equation}
-	\end{lstlisting}
+\begin{lstlisting}[caption={Código da equação \ref{eq:01}.}, label={cod:eq:01}]
+\begin{equation}
+	f(x) = \int \limits _{0}^{+ \infty} 
+	\tanh \left[\ln (j \omega)^2 \right] dx \,.
+	\label{eq:01}
+\end{equation}
+\end{lstlisting}
 		
-	$\Rightarrow$ \textbf{Lembre-se:} \textbf{\textcolor{red}{equações fazem parte do texto e, por isso, devem ser pontuadas!}}
+	$\Rightarrow$ \textbf{Lembre-se:} \textbf{\textcolor{VinhoUFOP}{equações fazem parte do texto e, por isso, devem ser pontuadas!}}
 
 
 \section{Figuras} % exemplo de ambiente sem numeração
@@ -610,14 +575,14 @@
 		
 	O código para inserção da figura \ref{fig:308} é mostrado no quadro \ref{cod:fig308}. Códigos também são considerados ilustrações e, caso apresentados, devem apresentar legenda e fonte. $\Rightarrow$ Busque testar o posicionamento delas na folha por meio dos parâmetros b (bottom),t (top),p (page) ou alguma combinação entre eles.
 	%
-	\begin{lstlisting}[caption={Exemplo de código para inserção de figuras.}, label={cod:fig308}]
-	\begin{figure}[ht] % Outras opções: b (bottom),t (top),p (page) ou alguma combinação entre elas
-		\centering \label{fig:308}
-		\caption{Escritório de telegrafia do século XIX.}
-		\includegraphics[width=0.7\textwidth]{fig09.pdf}
-		\caption*{\small Fonte: \textcite{thomson_1869}.}
-	\end{figure}
-	\end{lstlisting}
+\begin{lstlisting}[caption={Exemplo de inserção de código.}, label={cod:fig308}]
+\begin{figure}[ht] % Outras opções: b (bottom),t (top),p (page) ou alguma combinação entre elas
+	\centering \label{fig:308}
+	\caption{Escritório de telegrafia do século XIX.}
+	\includegraphics[width=0.7\textwidth]{fig09.pdf}
+	\caption*{\small Fonte: \textcite{thomson_1869}.}
+\end{figure}
+\end{lstlisting}
 		
 	Para realizar uma referência cruzada da ilustração, isto é, para referenciar algum a página de algum elemento, basta usar o comando \verb*|\pageref{apelido}|, em que o apelido é o termo utilizado, dentro do ambiente para o elemento, com o comando \verb*|\label{apelido}|. Por exemplo, a próxima figura está na página \verb*|\pageref{fig:309}| gera o número de página \pageref{fig:309}. Neste exemplo, o apelido é \verb*|fig:309|, que foi declarado dentro do ambiente da figura. Caso se deseje citar o número do ambiente do elemento desejado (seja ele uma seção, capítulo, nota de rodapé, ilustração ou qualquer outro), ao invés de sua posição no texto, use o comando \verb*|\ref{apelido}|. Experimente alterar a figura de lugar e veja o que acontece!
 		
@@ -630,11 +595,11 @@
 		\label{fig:309}
 	\end{figure}
 	 
-	$\Rightarrow$ \textbf{Lembre-se:} \textbf{\textcolor{red}{ Quando o autor do trabalho é o autor da ilustração, a fonte deve ser igualmente citada!}}.
+	$\Rightarrow$ \textbf{Lembre-se:} \textbf{\textcolor{VinhoUFOP}{ Quando o autor do trabalho é o autor da ilustração, a fonte deve ser igualmente citada!}}.
 
 \section{Tabelas}
 
-\subsection{Alternativa 1: tabela elaborada em planilha eletrônica}
+\subsection{Tabela elaborada em planilha eletrônica}
 	Você pode elaborar sua tabela em qualquer planilha eletrônica, como no \verb*|calc|, como ilustra a figura \ref{fig:elaborando-tabela}. No entanto, utilizá-la como uma imagem pode causar problemas de visualização e distorção. Caso escolha elaborar a sua tabela dessa maneira, recomenda-se utilizar algum mecanismo de conversão para o \LaTeX. Existem vários conversores online para este fim, como o \url{latextablegenerator.com}
 	
 	\begin{figure}[h!]
@@ -665,7 +630,7 @@
 			\caption*{\small Fonte: \url{latextablegenerator.com}.}
 	\end{figure}
 
-\subsection{Alternativa 2: Tabela elaborada no ambiente table}
+\subsection{Tabela elaborada no ambiente table}
 	Existem diversas maneiras simples e práticas de se gerar uma tabela bonita e formatada no \LaTeX. A primeira delas é criando a tabela no próprios ambientes \verb*|table| e \verb*|tabular|, exposto na tabela \ref{tab:primeiroP}. Se preferir, use os assistentes em seu editor favorito. 
 	% 
 	 \begin{table}[b]
@@ -742,10 +707,9 @@ Dessa forma, o uso de IA deverá ser  declarado quando tiver participação rele
 No que se refere estritamente à pesquisa, já existe uma portaria CNPq $n^{\circ}$ 2.664/2026, que instituiu a Política de Integridade na Atividade Científica. Nela é informado que o uso de Inteligência Artificial Generativa (IAG) deve ser declarado de forma clara e transparente, especificando a ferramenta e a finalidade em qualquer fase da pesquisa. \textbf{Recomenda-se que a declaração seja feita na seção de materiais e métodos (ou metodologia).}
 
 \subsection*{Como declarar o uso de IAG} 
-
-\caixa{\begin{exemplo}
-[Declaração de uso de Inteligência Artificial (IAG)] Conforme as diretrizes de ética acadêmica, declara-se que, durante a preparação desta pesquisa, utilizou-se uma ferramenta de \textbf{Inteligência Artificial Generativa} para a estruturação dos tópicos e geração do código LaTeX e correção de ortografia, baseando-se estritamente nas fontes fornecidas. Após a geração, o conteúdo foi revisado, editado e validado pelo autor, que assume total responsabilidade pelo material final.
-\end{exemplo}}
+\caixa{\begin{exemplo}[Declaração de uso de Inteligência Artificial (IAG)] Conforme as diretrizes de ética acadêmica, declara-se que, durante a preparação desta pesquisa, utilizou-se uma ferramenta de \textbf{Inteligência Artificial Generativa} para a estruturação dos tópicos e geração do código LaTeX e correção de ortografia, baseando-se estritamente nas fontes fornecidas. Após a geração, o conteúdo foi revisado, editado e validado pelo autor, que assume total responsabilidade pelo material final.
+\end{exemplo}
+}
 
 % Resultados
 \section{Resultados} \label{cap:resultados}
