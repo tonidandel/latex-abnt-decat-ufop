@@ -1,12 +1,12 @@
 # Template ABNT LaTeX para TCCs  -- DECAT-UFOP
 
-Modelo para Trabalho Final de Curso (TCC) - Departamento de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto (DECAT-UFOP).
+Modelo e tutorial para Trabalhos Academicos - Departamento de Engenharia de Controle e Automação da Universidade Federal de Ouro Preto (DECAT-UFOP).
 
 O modelo não segue uma aplicação exaustiva das normas, mas algumas de suas possibilidades. Antes de tudo, converse com seu orientador ou orientadora, mostre uma cópia do PDF gerado por este modelo e certifique-se de que não terá problemas futuros com relação à aceitação ou não por meio de uma banca ou comitê de avaliação.
 
 ## Instalação e utilização
 
-A última versão (release v26.09) pode ser acessada na aba releases, ou [aqui](https://github.com/tonidandel/latex-abnt-decat-ufop/releases/tag/v26.09-tcc-latex-decat-ufop).
+A última versão oficial pode ser acessada na aba [releases](https://github.com/tonidandel/latex-abnt-decat-ufop/releases).
 
 Se tiver alguma dúvida em como usar o modelo, acessar [uma pequena oficina LaTeX.](https://tonidandel.github.io//oficina-latex/).
 
@@ -22,7 +22,7 @@ $ sudo apt update && apt install texlive-full && apt install texstudio -s
 
 Após isso basta abrir o editor de texto texstudio no seu menu de aplicativos e começar a utilizar o programa.
 
-**Observações:** 
+**Observações:**
 
 - É recomendável utilizar alguma distribuição do sistema operacional GNU/Linux para rodar o template. 
 
