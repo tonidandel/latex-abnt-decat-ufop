@@ -77,6 +77,7 @@
 
 % --- Pacotes básicos
 \usepackage{graphicx} 	% gráficos
+\usepackage{graphbox} %  para alinhamento vertical  com 'align=c'
 \usepackage{lscape} % figuras em paisagem
 \usepackage[table,xcdraw]{xcolor} % tabelas
 \graphicspath{{figuras/}} % pasta para figuras
@@ -251,34 +252,18 @@
 		\newgeometry{margin=2.5cm}
 		\thispagestyle{empty}
 		\centering
-			\begin{minipage}{\textwidth}
-					\begin{tabular}{ccc}
-						\begin{tabular}{c}
-							\\
-							{\includegraphics[width=1.2cm]{logo-universidade.jpg} }
-						\end{tabular}
-						&
-						\begin{tabular}{c}
-							\\
-							{\Large \,\,\,\,\, \imprimirinstituicao \,\,\,\,\,} \\
-							{\large Escola de Minas} \\
-							{\large Engenharia de Controle e Automação}
-						\end{tabular}
-						&
-						\begin{tabular}{r}
-							\\
-							{\raggedright \includegraphics[width=2.8cm]{logo-unidade-2.jpg}}
-						\end{tabular}
-					\end{tabular}
-			\end{minipage}
-				
+		\includegraphics[height=2.7cm, align=c]{logo-universidade.jpg}%
+		\hfill
+		\begin{tabular}{c} \Large \imprimirinstituicao \\ {\large Escola de Minas} \\ {\large Engenharia de Controle e Automação} \end{tabular}%
+		\hfill
+		\includegraphics[height=2.7cm, align=c]{logo-unidade-2.jpg}
 		\centering
 		\vspace*{1.6cm}
 		
 		{\ABNTEXchapterfont \Large \imprimirautor}
 		\vspace*{\fill}
 		
-		{\ABNTEXchapterfont\bfseries \Large \imprimirtitulo}
+		{\ABNTEXchapterfont\bfseries \huge \imprimirtitulo}
 		
 		\vspace*{\fill}
 		\vspace*{\fill}
@@ -304,7 +289,7 @@
 		
 		\vspace*{\fill}
 		
-		{\ABNTEXchapterfont\bfseries \Large \imprimirtitulo}
+		{\ABNTEXchapterfont\bfseries \huge \imprimirtitulo}
 		
 		\vspace*{\fill}	
 		\hfill % Empurra o conteúdo para a direita
@@ -316,7 +301,7 @@
 		\end{minipage}
 		\vspace*{\fill}			
 		
-		{\Large\imprimirlocal} \\ 
+		{\large\imprimirlocal} \\ 
 		{\large \the\year}
 		%\par
 		\vspace*{1cm}
